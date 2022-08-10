@@ -11,7 +11,7 @@ namespace atikerhakiki
 {
 
 
-    public partial class Besi
+    public partial class Muhasebe
     {
 
         /// <summary>

@@ -32,16 +32,17 @@
           <ul class="submenu">
             <li><a href="Arac.aspx"> Araçlar</a></li>
             <li><a href="Kayıt2.aspx">Stok</a></li>
-            <li><a href="#">Kasa</a></li>
+            <li><a href="Kasa.aspx">Kasa</a></li>
             <li><a href="Besi.aspx">Besi</a></li>
+
             
           </ul>			
         </li>
         <li>
           <a href="#">MENU ITEM</a>
           <ul class="submenu">
-            <li><a href="/Cari/Index">Cari Kartlar</a></li>
-            <li><a href="/Muhasebe/Index">İşletme Muhasebe</a></li>
+            <li><a href="Cari.aspx">Cari Kartlar</a></li>
+            <li><a href="Muhasebe.aspx">İşletme Muhasebe</a></li>
             <li><a href="/Banka/Index">Banka Hareket</a></li>
             <li><a href="/Proje/Index">Proje</a></li>
           </ul>			

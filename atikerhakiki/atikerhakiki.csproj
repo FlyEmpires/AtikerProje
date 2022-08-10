@@ -72,6 +72,7 @@
     <Content Include="Banka.aspx" />
     <Content Include="Bayi.aspx" />
     <Content Include="Besi.aspx" />
+    <Content Include="Cari.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\animation.css" />
     <Content Include="css\bootstrap-grid.css" />
@@ -103,6 +104,7 @@
     <Content Include="Kasa.aspx" />
     <Content Include="Kayıt2.aspx" />
     <Content Include="ksyıt.aspx" />
+    <Content Include="Muhasebe.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +143,13 @@
     <Compile Include="Besi.aspx.designer.cs">
       <DependentUpon>Besi.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cari.aspx.cs">
+      <DependentUpon>Cari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cari.aspx.designer.cs">
+      <DependentUpon>Cari.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,6 +180,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Kasa.aspx.cs">
       <DependentUpon>Kasa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -191,6 +210,13 @@
     </Compile>
     <Compile Include="ksyıt.aspx.designer.cs">
       <DependentUpon>ksyıt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Muhasebe.aspx.cs">
+      <DependentUpon>Muhasebe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Muhasebe.aspx.designer.cs">
+      <DependentUpon>Muhasebe.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -268,6 +294,28 @@
     </None>
     <Content Include="DataSet6.xss">
       <DependentUpon>DataSet6.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet7.xsc">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet7.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet7.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet7.xss">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet8.xsc">
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet8.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet8.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet8.xss">
+      <DependentUpon>DataSet8.xsd</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
