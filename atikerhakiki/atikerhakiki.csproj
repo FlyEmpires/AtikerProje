@@ -67,14 +67,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Anasayfa.aspx" />
     <Content Include="Arac.aspx" />
     <Content Include="Bayi.aspx" />
     <Content Include="Besi.aspx" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\animation.css" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-grid.rtl.css" />
+    <Content Include="css\bootstrap-grid.rtl.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap.rtl.css" />
+    <Content Include="css\bootstrap.rtl.min.css" />
+    <Content Include="css\flaticon.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.fancybox.min.css" />
+    <Content Include="css\jquery.mCustomScrollbar.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\owl.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\site.css" />
+    <Content Include="images\Atiker 3.jpg" />
+    <Content Include="images\atiker.jpg" />
+    <Content Include="images\Atiker2.png" />
+    <Content Include="images\atikerjr siyah.jpeg" />
+    <Content Include="images\AtikerJR.jpeg" />
+    <Content Include="images\atikerlogo.jpeg" />
+    <Content Include="images\atikerlogo.png" />
+    <Content Include="images\Ekran Alıntısı.PNG" />
+    <Content Include="images\Screenshot_248.png" />
     <Content Include="Kayıt2.aspx" />
     <Content Include="ksyıt.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anasayfa.aspx.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anasayfa.aspx.designer.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Arac.aspx.cs">
       <DependentUpon>Arac.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,6 +172,14 @@
     <Content Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-grid.rtl.css.map" />
+    <Content Include="css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="css\bootstrap.rtl.css.map" />
+    <Content Include="css\bootstrap.rtl.min.css.map" />
     <None Include="DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

@@ -28,21 +28,21 @@ namespace atikerhakiki
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            OleDbCommand sil_sql = new OleDbCommand();
-            SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True");
-            sil_sql.CommandText = "delete from TBLSTOKSB where REC_NO=@id";
-            sil_sql.Parameters.AddWithValue("@id",GridView1.SelectedRow.Cells[1].Text);
-            if (baglanti.State!=System.Data.ConnectionState.Open)
-            {
-                baglanti.Open();
+            //OleDbCommand sil_sql = new OleDbCommand();
+            //SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True");
+            //sil_sql.CommandText = "delete from TBLSTOKSB where REC_NO=@id";
+            //sil_sql.Parameters.AddWithValue("@id",GridView1.SelectedRow.Cells[1].Text);
+            //if (baglanti.State!=System.Data.ConnectionState.Open)
+            //{
+            //    baglanti.Open();
 
-            }
-            if (sil_sql.ExecuteNonQuery()>0)
-            {
-                Label1.Text = "SİLME BAŞARILI";
-            }
-            baglanti.Close();
-            GridView1.SelectedIndex = -1;
+            //}
+            //if (sil_sql.ExecuteNonQuery()>0)
+            //{
+            //    Label1.Text = "SİLME BAŞARILI";
+            //}
+            //baglanti.Close();
+            //GridView1.SelectedIndex = -1;
 
 
 
