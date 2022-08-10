@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Anasayfa.aspx" />
     <Content Include="Arac.aspx" />
+    <Content Include="Banka.aspx" />
     <Content Include="Bayi.aspx" />
     <Content Include="Besi.aspx" />
     <Content Include="css\animate.css" />
@@ -99,6 +100,7 @@
     <Content Include="images\atikerlogo.png" />
     <Content Include="images\Ekran Alıntısı.PNG" />
     <Content Include="images\Screenshot_248.png" />
+    <Content Include="Kasa.aspx" />
     <Content Include="Kayıt2.aspx" />
     <Content Include="ksyıt.aspx" />
     <Content Include="Web.config" />
@@ -117,6 +119,13 @@
     </Compile>
     <Compile Include="Arac.aspx.designer.cs">
       <DependentUpon>Arac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banka.aspx.cs">
+      <DependentUpon>Banka.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Banka.aspx.designer.cs">
+      <DependentUpon>Banka.aspx</DependentUpon>
     </Compile>
     <Compile Include="Bayi.aspx.cs">
       <DependentUpon>Bayi.aspx</DependentUpon>
@@ -151,6 +160,23 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Kasa.aspx.cs">
+      <DependentUpon>Kasa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kasa.aspx.designer.cs">
+      <DependentUpon>Kasa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Kayıt2.aspx.cs">
       <DependentUpon>Kayıt2.aspx</DependentUpon>
@@ -220,6 +246,28 @@
     </None>
     <Content Include="DataSet4.xss">
       <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet5.xsc">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet5.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet5.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet5.xss">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet6.xsc">
+      <DependentUpon>DataSet6.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet6.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet6.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet6.xss">
+      <DependentUpon>DataSet6.xsd</DependentUpon>
     </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
