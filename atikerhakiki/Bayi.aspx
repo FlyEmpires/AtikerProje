@@ -54,13 +54,13 @@
         </div>
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="BAYI_KODU" DataSourceID="SqlDataSource2">
-                <Columns>
-                    <asp:BoundField DataField="BAYI_KODU" HeaderText="BAYI_KODU" ReadOnly="True" SortExpression="BAYI_KODU" />
-                    <asp:BoundField DataField="BAYI_ISIM" HeaderText="BAYI_ISIM" SortExpression="BAYI_ISIM" />
-                    <asp:BoundField DataField="FIRMA_ADI" HeaderText="FIRMA_ADI" SortExpression="FIRMA_ADI" />
-                    <asp:BoundField DataField="VERGI_NO" HeaderText="VERGI_NO" SortExpression="VERGI_NO" />
-                </Columns>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" Height="26px" OnClick="Button2_Click" Text="SİL" Width="60px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label1" runat="server" Text="Bayi Kodu:     "></asp:Label>
+&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+            <asp:GridView ID="GridView1" runat="server" Height="162px" Width="493px">
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [BAYI_KODU], [BAYI_ISIM], [FIRMA_ADI], [VERGI_NO] FROM [TBLCRM_BAYISB]"></asp:SqlDataSource>
         </p>

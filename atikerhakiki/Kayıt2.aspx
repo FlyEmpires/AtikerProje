@@ -70,16 +70,21 @@
             <asp:TextBox ID="TextBox6" runat="server" CssClass="auto-style3" Height="43px" Width="195px"></asp:TextBox>
         </p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [STOK_ADI], [STOK_TIPI], [STOK_KISA_ADI], [STOK_KODU], [PERAKENDE_ALIS_KDV] FROM [TBLSTOKSB]"></asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="STOK_KODU" DataSourceID="SqlDataSource1" Height="456px" style="margin-top: 109px" Width="734px">
-            <Columns>
-                <asp:BoundField DataField="STOK_ADI" HeaderText="STOK_ADI" SortExpression="STOK_ADI" />
-                <asp:BoundField DataField="STOK_TIPI" HeaderText="STOK_TIPI" SortExpression="STOK_TIPI" />
-                <asp:BoundField DataField="STOK_KISA_ADI" HeaderText="STOK_KISA_ADI" SortExpression="STOK_KISA_ADI" />
-                <asp:BoundField DataField="STOK_KODU" HeaderText="STOK_KODU" ReadOnly="True" SortExpression="STOK_KODU" />
-                <asp:BoundField DataField="PERAKENDE_ALIS_KDV" HeaderText="PERAKENDE_ALIS_KDV" SortExpression="PERAKENDE_ALIS_KDV" />
-            </Columns>
+        <br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="165px" Width="555px">
+            <AlternatingRowStyle BackColor="White" />
+            <EditRowStyle BackColor="#7C6F57" />
+            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#E3EAEB" />
+            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F8FAFA" />
+            <SortedAscendingHeaderStyle BackColor="#246B61" />
+            <SortedDescendingCellStyle BackColor="#D4DFE1" />
+            <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </form>
 </body>
 </html>

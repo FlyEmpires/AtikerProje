@@ -55,6 +55,12 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
                 <p>
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" runat="server" Height="23px" OnClick="Button2_Click" Text="SİL" Width="57px" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label1" runat="server" Text="İŞLETME NO: "></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
         </p>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="HESAP_KODU" DataSourceID="SqlDataSource2">
             <Columns>

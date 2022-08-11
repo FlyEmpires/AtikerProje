@@ -17,9 +17,13 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            con.ConnectionString = @"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True"; 
+            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+
             con.Open();
+            if (!Page.IsPostBack)
+            {
+                listeleme();
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -27,6 +31,20 @@ namespace atikerhakiki
             
             DataSet8TableAdapters.TBLCARISBTableAdapter dt = new DataSet8TableAdapters.TBLCARISBTableAdapter();
             dt.CariEkle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text);
+            listeleme();
+        }
+        public void listeleme()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "select CARI_KODU, CARI_KISA_ISIM, CARI_IL,CARI_ILCE from TBLCARISB";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+
+            con.Close();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -46,6 +64,7 @@ namespace atikerhakiki
             cmd.CommandText = "Delete from TBLCARISB where CARI_KODU='" + TextBox6.Text.ToString()+"'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
+            listeleme();
         }
 
         protected void TextBox6_TextChanged(object sender, EventArgs e)

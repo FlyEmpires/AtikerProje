@@ -46,15 +46,14 @@
         </div>
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" Height="24px" OnClick="Button2_Click" Text="SİL" Width="73px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label1" runat="server" Text="HESAP KODU:"></asp:Label>
+&nbsp;
+            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
         </p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="BANKA_HESAP_KODU" DataSourceID="SqlDataSource2">
-            <Columns>
-                <asp:BoundField DataField="BANKA_HESAP_KODU" HeaderText="BANKA_HESAP_KODU" ReadOnly="True" SortExpression="BANKA_HESAP_KODU" />
-                <asp:BoundField DataField="BANKA_HESAP_ISIM" HeaderText="BANKA_HESAP_ISIM" SortExpression="BANKA_HESAP_ISIM" />
-                <asp:BoundField DataField="IBAN_NO" HeaderText="IBAN_NO" SortExpression="IBAN_NO" />
-                <asp:BoundField DataField="BANKA_HESAP_TIPI" HeaderText="BANKA_HESAP_TIPI" SortExpression="BANKA_HESAP_TIPI" />
-                <asp:BoundField DataField="BANKA_TELEFON" HeaderText="BANKA_TELEFON" SortExpression="BANKA_TELEFON" />
-            </Columns>
+        <asp:GridView ID="GridView1" runat="server" Height="145px" Width="329px">
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [BANKA_HESAP_KODU], [BANKA_HESAP_ISIM], [IBAN_NO], [BANKA_HESAP_TIPI], [BANKA_TELEFON] FROM [TBLBANKASB]"></asp:SqlDataSource>
     </form>

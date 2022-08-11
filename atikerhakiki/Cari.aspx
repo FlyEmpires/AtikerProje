@@ -69,14 +69,7 @@
                     <asp:Button ID="Button3" runat="server" Height="59px" OnClick="Button3_Click" Text="SİL" Width="111px" />
 &nbsp;&nbsp; CARİ NO:<asp:TextBox ID="TextBox6" runat="server" Height="47px" OnTextChanged="TextBox6_TextChanged" TextMode="MultiLine" Width="172px"></asp:TextBox>
         </p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CARI_KODU" DataSourceID="SqlDataSource2" Height="392px" Width="700px">
-            <Columns>
-                <asp:BoundField DataField="CARI_KODU" HeaderText="CARI_KODU" ReadOnly="True" SortExpression="CARI_KODU" />
-                <asp:BoundField DataField="CARI_ADI" HeaderText="CARI_ADI" SortExpression="CARI_ADI" />
-                <asp:BoundField DataField="CARI_KISA_ISIM" HeaderText="CARI_KISA_ISIM" SortExpression="CARI_KISA_ISIM" />
-                <asp:BoundField DataField="CARI_IL" HeaderText="CARI_IL" SortExpression="CARI_IL" />
-                <asp:BoundField DataField="CARI_ILCE" HeaderText="CARI_ILCE" SortExpression="CARI_ILCE" />
-            </Columns>
+        <asp:GridView ID="GridView1" runat="server" Height="162px" Width="552px">
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [CARI_KODU], [CARI_ADI], [CARI_KISA_ISIM], [CARI_IL], [CARI_ILCE] FROM [TBLCARISB]"></asp:SqlDataSource>
     </form>

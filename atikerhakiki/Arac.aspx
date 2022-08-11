@@ -12,9 +12,6 @@
         .auto-style1 {
             height: 37px;
         }
-        .auto-style2 {
-            margin-top: 17px;
-        }
         .auto-style4 {
             height: 15px;
         }
@@ -74,25 +71,7 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" style="height: 26px" />
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" Width="115px" />
             <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-            <asp:GridView ID="GridView1" class="tablo2" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" DataKeyNames="ARAC_PLAKA" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:BoundField DataField="REC_DATE" HeaderText="REC_DATE" SortExpression="REC_DATE" />
-                    <asp:BoundField DataField="REC_USERNAME" HeaderText="REC_USERNAME" SortExpression="REC_USERNAME" />
-                    <asp:BoundField DataField="ARAC_PLAKA" HeaderText="ARAC_PLAKA" ReadOnly="True" SortExpression="ARAC_PLAKA" />
-                    <asp:BoundField DataField="ARAC_MODEL" HeaderText="ARAC_MODEL" SortExpression="ARAC_MODEL" />
-                    <asp:BoundField DataField="ARAC_MARKA" HeaderText="ARAC_MARKA" SortExpression="ARAC_MARKA" />
-                </Columns>
-                <FooterStyle BackColor="#CCCC99" />
-                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                <PagerSettings Position="TopAndBottom" />
-                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                <RowStyle BackColor="#F7F7DE" HorizontalAlign="Justify" />
-                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                <SortedAscendingHeaderStyle BackColor="#848384" />
-                <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                <SortedDescendingHeaderStyle BackColor="#575357" />
+            <asp:GridView ID="GridView1" runat="server" Height="181px" Width="317px">
             </asp:GridView>
         </p>
 

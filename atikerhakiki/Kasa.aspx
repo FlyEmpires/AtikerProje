@@ -53,18 +53,16 @@
         </div>
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" Height="26px" OnClick="Button2_Click" Text="SİL" Width="56px" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label1" runat="server" Text="ŞUBE  KODU: "></asp:Label>
+            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                 </p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="KASA_KODU" DataSourceID="SqlDataSource2">
-            <Columns>
-                <asp:BoundField DataField="KASA_KODU" HeaderText="KASA_KODU" ReadOnly="True" SortExpression="KASA_KODU" />
-                <asp:BoundField DataField="KASA_TANIMI" HeaderText="KASA_TANIMI" SortExpression="KASA_TANIMI" />
-                <asp:BoundField DataField="SUBE_KODU" HeaderText="SUBE_KODU" SortExpression="SUBE_KODU" />
-                <asp:BoundField DataField="DOVIZLI_MI" HeaderText="DOVIZLI_MI" SortExpression="DOVIZLI_MI" />
-                <asp:BoundField DataField="POS_ODEME_TIPI" HeaderText="POS_ODEME_TIPI" SortExpression="POS_ODEME_TIPI" />
-            </Columns>
+        <asp:GridView ID="GridView1" runat="server" Height="150px" Width="284px">
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [KASA_KODU], [KASA_TANIMI], [SUBE_KODU], [DOVIZLI_MI], [POS_ODEME_TIPI] FROM [TBLKASASB]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [KASA_KODU], [KASA_TANIMI], [SUBE_KODU], [DOVIZLI_MI], [POS_ODEME_TIPI] FROM [TBLKASASB]" OnSelecting="SqlDataSource2_Selecting"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

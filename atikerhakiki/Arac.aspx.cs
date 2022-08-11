@@ -17,14 +17,33 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+
             con.Open();
+            if (!Page.IsPostBack)
+            {
+                listeleme();
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             DataSet2TableAdapters.TBLARACSBTableAdapter dt = new DataSet2TableAdapters.TBLARACSBTableAdapter();
             dt.AraçEkle(Convert.ToDateTime( TextBox1.Text),TextBox2.Text, TextBox3.Text, TextBox4.Text,TextBox5.Text);
+            listeleme();
+        }
+        public void listeleme()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "select REC_NO, REC_DATE, REC_USERNAME, ARAC_PLAKA,ARAC_MODEL,ARAC_MARKA from TBLARACSB";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+
+            con.Close();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -35,6 +54,7 @@ namespace atikerhakiki
             cmd.CommandText = "DELETE FROM TBLARACSB WHERE REC_NO = '" + TextBox6.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
+            listeleme();
             
         }
     }
