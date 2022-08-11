@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -25,6 +27,10 @@
     </style>
 </head>
 <body>
+    <ul class="pager">
+  <li></li>
+        <li><a href="Anasayfa.aspx">ANASAYFA</a></li>
+</ul>
     <form id="form1" runat="server">
         <div>
 
@@ -66,6 +72,8 @@
         </div>
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" style="height: 26px" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" Width="115px" />
+            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
             <asp:GridView ID="GridView1" class="tablo2" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" DataKeyNames="ARAC_PLAKA" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
@@ -87,7 +95,9 @@
                 <SortedDescendingHeaderStyle BackColor="#575357" />
             </asp:GridView>
         </p>
+
     </form>
+    
 </body>
 </html>
 <style>

@@ -28,7 +28,7 @@
 
      <ul class="menu cf">
         <li>
-          <a href="#">MENU ITEM</a>
+          <a href="#">Menü 1</a>
           <ul class="submenu">
             <li><a href="Arac.aspx"> Araçlar</a></li>
             <li><a href="Kayıt2.aspx">Stok</a></li>
@@ -39,7 +39,7 @@
           </ul>			
         </li>
         <li>
-          <a href="#">MENU ITEM</a>
+          <a href="#">Menü 2</a>
           <ul class="submenu">
             <li><a href="Cari.aspx">Cari Kartlar</a></li>
             <li><a href="Muhasebe.aspx">İşletme Muhasebe</a></li>
@@ -47,7 +47,15 @@
             <li><a href="/Proje/Index">Proje</a></li>
           </ul>			
         </li>
-          <li><a href="#">Contact</a>
+         <li>
+          <a href="#">Menü 3</a>
+          <ul class="submenu">
+            <li><a href="Bayi.aspx">Bayi</a></li>
+            <li><a href="Muhasebe.aspx">Muhasebe</a></li>
+           
+          </ul>			
+        </li>
+          <li><a href="#">İletişim</a>
             <ul class="submenu">
             <li><a href="#"> Atiker Numara:</a></li>
             <li><a href="#">Sosyal Medya Hesabı</a></li>         

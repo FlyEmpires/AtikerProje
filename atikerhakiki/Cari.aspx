@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -14,9 +16,16 @@
             width: 559px;
             height: 336px;
         }
+        .auto-style3 {
+            margin-right: 36px;
+        }
     </style>
 </head>
 <body>
+    <ul class="pager">
+  <li></li>
+        <li><a href="Anasayfa.aspx">ANASAYFA</a></li>
+</ul>
     <form id="form1" runat="server">
         <div>
             <table class="auto-style2" border="1">
@@ -55,7 +64,10 @@
         </div>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
                 <p>
-                    <asp:Button ID="Button1" runat="server" Height="63px" OnClick="Button1_Click" Text="KAYDET" Width="117px" />
+                    <asp:Button ID="Button1" runat="server" Height="63px" OnClick="Button1_Click" Text="KAYDET" Width="132px" />
+                    <asp:Button ID="Button2" runat="server" CssClass="auto-style3" Height="61px" OnClick="Button2_Click" Text="GÜNCELLE" Width="175px" />
+                    <asp:Button ID="Button3" runat="server" Height="59px" OnClick="Button3_Click" Text="SİL" Width="111px" />
+&nbsp;&nbsp; CARİ NO:<asp:TextBox ID="TextBox6" runat="server" Height="47px" OnTextChanged="TextBox6_TextChanged" TextMode="MultiLine" Width="172px"></asp:TextBox>
         </p>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="CARI_KODU" DataSourceID="SqlDataSource2" Height="392px" Width="700px">
             <Columns>

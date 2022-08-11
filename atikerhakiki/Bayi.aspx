@@ -53,7 +53,7 @@
     </table>
         </div>
         <p>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="BAYI_KODU" DataSourceID="SqlDataSource2">
                 <Columns>
                     <asp:BoundField DataField="BAYI_KODU" HeaderText="BAYI_KODU" ReadOnly="True" SortExpression="BAYI_KODU" />
