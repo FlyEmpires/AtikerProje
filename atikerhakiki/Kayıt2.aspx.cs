@@ -91,5 +91,14 @@ namespace atikerhakiki
         {
 
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            cmd.CommandText = "Update TBLSTOKSB set STOK_ADI='" + TextBox1.Text.ToString() + "',STOK_TIPI='" + TextBox2.Text.ToString() + "',STOK_KISA_ADI='" + TextBox3.Text.ToString() + "',PERAKENDE_ALIS_KDV='" + TextBox5.Text.ToString() + "' where STOK_KODU='" + TextBox7.Text.ToString() + "' ";
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            listeleme();
+        }
     }
 }

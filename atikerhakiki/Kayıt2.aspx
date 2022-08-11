@@ -65,6 +65,12 @@
         </div>
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" Height="54px" Width="128px" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button3" runat="server" Height="53px" OnClick="Button3_Click" Text="GÜNCELLE" Width="122px" />
+&nbsp;
+            <asp:Label ID="Label1" runat="server" Text="STOK KODU: "></asp:Label>
+&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox7" runat="server" Height="45px" Width="139px"></asp:TextBox>
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="margin-left: 55px" Text="SİL" Width="131px" Height="52px" />
         &nbsp;&nbsp;&nbsp;&nbsp; Stok Kodu:&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="TextBox6" runat="server" CssClass="auto-style3" Height="43px" Width="195px"></asp:TextBox>

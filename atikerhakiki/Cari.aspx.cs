@@ -32,11 +32,14 @@ namespace atikerhakiki
             DataSet8TableAdapters.TBLCARISBTableAdapter dt = new DataSet8TableAdapters.TBLCARISBTableAdapter();
             dt.CariEkle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text);
             listeleme();
+        
+
+
         }
         public void listeleme()
         {
             ds = new DataSet();
-            cmd.CommandText = "select CARI_KODU, CARI_KISA_ISIM, CARI_IL,CARI_ILCE from TBLCARISB";
+            cmd.CommandText = "select CARI_ADI,CARI_KODU, CARI_KISA_ISIM, CARI_IL,CARI_ILCE from TBLCARISB";
             cmd.Connection = con;
             adp = new SqlDataAdapter(cmd);
             adp.Fill(ds);
@@ -44,15 +47,28 @@ namespace atikerhakiki
             GridView1.DataSource = ds;
             GridView1.DataBind();
 
+        }
+        public void listeleme2()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "select YEVMIYE_ACIKLAMA, KAYIT_ACIKLAMA, BORC,ALACAK from TBLCARIHR where CARI_KODU_RECID='" + TextBox7.Text.ToString() + "'";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView2.DataSource = ds;
+            GridView2.DataBind();
+
             con.Close();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLCARISB set CARI_ADI='"+TextBox2.Text.ToString()+"',CARI_KISA_ISIM='"+TextBox3.Text.ToString()+"',CARI_IL='"+TextBox4.ToString()+"',CARI_ILCE='"+TextBox5.Text.ToString()+"' where CARI_KODU='"+TextBox1.Text.ToString()+"' ";
+            cmd.CommandText = "Update TBLCARISB set CARI_ADI='"+TextBox2.Text.ToString()+"',CARI_KISA_ISIM='"+TextBox3.Text.ToString()+"',CARI_IL='"+TextBox4.Text.ToString()+"',CARI_ILCE='"+TextBox5.Text.ToString()+"' where CARI_KODU='"+TextBox1.Text.ToString()+"' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
+            listeleme();
          
            
         
@@ -71,6 +87,11 @@ namespace atikerhakiki
         {
 
 
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            listeleme2();
         }
     }
 }

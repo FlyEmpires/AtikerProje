@@ -13,8 +13,8 @@
             width: 170px;
         }
         .auto-style2 {
-            width: 559px;
-            height: 336px;
+            width: 486px;
+            height: 215px;
         }
         .auto-style3 {
             margin-right: 36px;
@@ -69,9 +69,15 @@
                     <asp:Button ID="Button3" runat="server" Height="59px" OnClick="Button3_Click" Text="SİL" Width="111px" />
 &nbsp;&nbsp; CARİ NO:<asp:TextBox ID="TextBox6" runat="server" Height="47px" OnTextChanged="TextBox6_TextChanged" TextMode="MultiLine" Width="172px"></asp:TextBox>
         </p>
-        <asp:GridView ID="GridView1" runat="server" Height="162px" Width="552px">
+        &nbsp;
+        <asp:GridView ID="GridView1" runat="server" Height="136px" Width="512px">
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [CARI_KODU], [CARI_ADI], [CARI_KISA_ISIM], [CARI_IL], [CARI_ILCE] FROM [TBLCARISB]"></asp:SqlDataSource>
+        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Button" />
+        <asp:GridView ID="GridView2" runat="server" Height="162px" Width="501px">
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server"></asp:SqlDataSource>
     </form>
 </body>
 </html>
