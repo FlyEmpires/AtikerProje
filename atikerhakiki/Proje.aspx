@@ -80,15 +80,13 @@
     </table>
         </div>
         <asp:Button ID="Button1" runat="server" Height="84px" OnClick="Button1_Click" Text="KAYDET" Width="149px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label1" runat="server" Text="PROJE KODU:  "></asp:Label>
+&nbsp;<asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button2" runat="server" Height="75px" OnClick="Button2_Click" Text="SİL" Width="157px" />
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="PROJE_KODU" DataSourceID="SqlDataSource2" Height="386px" Width="960px">
-                    <Columns>
-                        <asp:BoundField DataField="PROJE_KODU" HeaderText="PROJE_KODU" ReadOnly="True" SortExpression="PROJE_KODU" />
-                        <asp:BoundField DataField="PROJE_ADI" HeaderText="PROJE_ADI" SortExpression="PROJE_ADI" />
-                        <asp:BoundField DataField="PROJE_BASLAMA_TARIHI" HeaderText="PROJE_BASLAMA_TARIHI" SortExpression="PROJE_BASLAMA_TARIHI" />
-                        <asp:BoundField DataField="PROJE_AKTIF" HeaderText="PROJE_AKTIF" SortExpression="PROJE_AKTIF" />
-                        <asp:BoundField DataField="PROJE_TESLIM_TARIHI" HeaderText="PROJE_TESLIM_TARIHI" SortExpression="PROJE_TESLIM_TARIHI" />
-                    </Columns>
+                <asp:GridView ID="GridView1" runat="server" Height="220px" Width="696px">
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [PROJE_KODU], [PROJE_ADI], [PROJE_BASLAMA_TARIHI], [PROJE_AKTIF], [PROJE_TESLIM_TARIHI] FROM [TBLPROJEDOSYA]"></asp:SqlDataSource>
     </form>

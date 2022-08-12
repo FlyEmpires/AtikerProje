@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
            
@@ -43,6 +43,16 @@ namespace atikerhakiki
             cmd.CommandText = "Delete from TBLMUHSB where HESAP_KODU='" + TextBox6.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            cmd.CommandText = "Update TBLMUHSB set HESAP_TIPI='" + TextBox5.Text.ToString() + "',ISLETME_NO='" + TextBox1.Text.ToString() + "',HESAP_SINIF_KODU='" + TextBox3.Text.ToString() + "',HESAP_GRUP_KODU='" + TextBox4.Text.ToString() + "' where HESAP_KODU='" + TextBox2.Text.ToString() + "' ";
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+           
+
         }
     }
 }

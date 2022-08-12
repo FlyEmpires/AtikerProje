@@ -43,8 +43,8 @@
           <ul class="submenu">
             <li><a href="Cari.aspx">Cari Kartlar</a></li>
             <li><a href="Muhasebe.aspx">İşletme Muhasebe</a></li>
-            <li><a href="/Banka/Index">Banka Hareket</a></li>
-            <li><a href="/Proje/Index">Proje</a></li>
+            <li><a href="Banka.aspx">Banka Hareket</a></li>
+            <li><a href="Proje.aspx">Proje</a></li>
           </ul>			
         </li>
          <li>

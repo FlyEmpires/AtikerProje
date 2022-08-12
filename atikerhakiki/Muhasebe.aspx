@@ -13,12 +13,22 @@
         .auto-style2 {
             width: 172px;
         }
+        .auto-style3 {
+            width: 611px;
+            height: 211px;
+        }
     </style>
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
+
 </head>
 <body>
+    <ul class="pager">
+  <li></li>
+        <li><a href="Anasayfa.aspx">ANASAYFA</a></li>
+</ul>
     <form id="form1" runat="server">
         <div>
-            <table class="auto-style6" border="1">
+            <table class="auto-style3" border="1">
 
         <tr>
             <td>&nbsp &nbsp &nbsp İşletme NO:</td>
@@ -55,14 +65,15 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
                 <p>
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button2" runat="server" Height="23px" OnClick="Button2_Click" Text="SİL" Width="57px" />
+        &nbsp;&nbsp;&nbsp;<asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="GÜNCELLEME" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" runat="server" Height="27px" OnClick="Button2_Click" Text="SİL" Width="89px" />
 &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Label ID="Label1" runat="server" Text="İŞLETME NO: "></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
         </p>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="HESAP_KODU" DataSourceID="SqlDataSource2">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="HESAP_KODU" DataSourceID="SqlDataSource2" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Height="295px" Width="616px">
             <Columns>
                 <asp:BoundField DataField="ISLETME_NO" HeaderText="ISLETME_NO" SortExpression="ISLETME_NO" />
                 <asp:BoundField DataField="HESAP_KODU" HeaderText="HESAP_KODU" ReadOnly="True" SortExpression="HESAP_KODU" />
@@ -70,6 +81,15 @@
                 <asp:BoundField DataField="HESAP_GRUP_KODU" HeaderText="HESAP_GRUP_KODU" SortExpression="HESAP_GRUP_KODU" />
                 <asp:BoundField DataField="HESAP_TIPI" HeaderText="HESAP_TIPI" SortExpression="HESAP_TIPI" />
             </Columns>
+            <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+            <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+            <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+            <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#FFF1D4" />
+            <SortedAscendingHeaderStyle BackColor="#B95C30" />
+            <SortedDescendingCellStyle BackColor="#F1E5CE" />
+            <SortedDescendingHeaderStyle BackColor="#93451F" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [ISLETME_NO], [HESAP_KODU], [HESAP_SINIF_KODU], [HESAP_GRUP_KODU], [HESAP_TIPI] FROM [TBLMUHSB]"></asp:SqlDataSource>
     </form>

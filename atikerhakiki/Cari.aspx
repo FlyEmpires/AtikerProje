@@ -74,7 +74,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [CARI_KODU], [CARI_ADI], [CARI_KISA_ISIM], [CARI_IL], [CARI_ILCE] FROM [TBLCARISB]"></asp:SqlDataSource>
         <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Button" />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" Height="51px" Width="138px" />
         <asp:GridView ID="GridView2" runat="server" Height="162px" Width="501px">
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource3" runat="server"></asp:SqlDataSource>

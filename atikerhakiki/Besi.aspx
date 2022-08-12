@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -40,6 +42,10 @@
     </style>
 </head>
 <body>
+    <ul class="pager">
+  <li></li>
+        <li><a href="Anasayfa.aspx">ANASAYFA</a></li>
+</ul>
     <form id="form1" runat="server">
         <div>
             <table class="auto-style2" border="1">
@@ -78,15 +84,14 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" Height="72px" Width="166px" />
+        &nbsp;&nbsp;&nbsp;<asp:Button ID="Button3" runat="server" Height="68px" OnClick="Button3_Click" Text="GÜNCELLEME:  " Width="244px" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" Height="66px" OnClick="Button2_Click" Text="SİL" Width="159px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label1" runat="server" Text="Küpe No:   "></asp:Label>
+            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
         </p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="KUPE_NO" DataSourceID="SqlDataSource2" Height="414px" Width="699px">
-            <Columns>
-                <asp:BoundField DataField="KUPE_NO" HeaderText="KUPE_NO" ReadOnly="True" SortExpression="KUPE_NO" />
-                <asp:BoundField DataField="BESI_ADI" HeaderText="BESI_ADI" SortExpression="BESI_ADI" />
-                <asp:BoundField DataField="BESI_CINSI" HeaderText="BESI_CINSI" SortExpression="BESI_CINSI" />
-                <asp:BoundField DataField="DOGUM_TARIHI" HeaderText="DOGUM_TARIHI" SortExpression="DOGUM_TARIHI" />
-                <asp:BoundField DataField="DOGUM_KG" HeaderText="DOGUM_KG" SortExpression="DOGUM_KG" />
-            </Columns>
+        <asp:GridView ID="GridView1" runat="server" Height="229px" Width="620px">
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [KUPE_NO], [BESI_ADI], [BESI_CINSI], [DOGUM_TARIHI], [DOGUM_KG] FROM [TBLBESISB]"></asp:SqlDataSource>
     </form>

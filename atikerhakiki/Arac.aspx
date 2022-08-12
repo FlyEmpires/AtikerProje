@@ -19,16 +19,17 @@
             height: 20px;
         }
         .auto-style6 {
-            height: 198px;
+            height: 240px;
+            width: 453px;
         }
     </style>
 </head>
 <body>
+    <form id="form1" runat="server">
     <ul class="pager">
   <li></li>
         <li><a href="Anasayfa.aspx">ANASAYFA</a></li>
 </ul>
-    <form id="form1" runat="server">
         <div>
 
              <table class="auto-style6" border="1">
@@ -57,10 +58,10 @@
         </tr>
 
         <tr>
-            <td>&nbsp; &nbsp; &nbsp;
+            <td class="auto-style7">&nbsp; &nbsp; &nbsp;
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
                 Araç Marka </td>
-            <td><asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></td>
+            <td class="auto-style7"><asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></td>
         </tr>
 
     </table>
@@ -68,10 +69,20 @@
 
         </div>
         <p>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" style="height: 26px" />
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" Width="115px" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" Height="36px" Width="102px" />
+            <asp:Button ID="Button3" runat="server" Height="35px" OnClick="Button3_Click" Text="GÜNCELLE" Width="85px" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="SİL" Width="130px" Height="35px" />
             <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-            <asp:GridView ID="GridView1" runat="server" Height="181px" Width="317px">
+            <asp:GridView ID="GridView1" runat="server" Height="426px" Width="792px" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
+                <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                <FooterStyle BackColor="Tan" />
+                <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                <SortedDescendingHeaderStyle BackColor="#C2A47B" />
             </asp:GridView>
         </p>
 
@@ -92,5 +103,9 @@ background-color:aqua;
     width: 75%;
     height: 20px;
 }
+
+    .auto-style7 {
+        height: 83px;
+    }
 
 </style>

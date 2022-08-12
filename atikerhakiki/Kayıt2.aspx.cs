@@ -25,7 +25,7 @@ namespace atikerhakiki
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)

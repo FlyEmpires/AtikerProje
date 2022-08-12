@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -25,6 +25,7 @@ namespace atikerhakiki
                 listeleme();
             }
         }
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -56,6 +57,16 @@ namespace atikerhakiki
             cmd.ExecuteNonQuery();
             listeleme();
             
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            cmd.CommandText = "Update TBLARACSB set REC_DATE='" + TextBox1.Text.ToString() + "',REC_USERNAME='" + TextBox2.Text.ToString() + "',ARAC_MODEL='" + TextBox4.Text.ToString() + "',ARAC_MARKA='" + TextBox5.Text.ToString() + "' where ARAC_PLAKA='" + TextBox3.Text.ToString() + "' ";
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            listeleme();
+
         }
     }
 }
