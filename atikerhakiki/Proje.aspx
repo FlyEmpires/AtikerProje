@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -18,6 +20,10 @@
     </style>
 </head>
 <body>
+    <ul class="pager">
+  <li></li>
+        <li><a href="Anasayfa.aspx">ANASAYFA</a></li>
+</ul>
     <form id="form1" runat="server">
         <div>
 

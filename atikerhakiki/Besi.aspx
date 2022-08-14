@@ -22,7 +22,7 @@
         }
         .auto-style4 {
             width: 224px;
-            height: 0px;
+            height: 84px;
         }
         .auto-style5 {
             width: 225px;
@@ -38,6 +38,10 @@
         .auto-style8 {
             width: 324px;
             height: 57px;
+        }
+        .auto-style9 {
+            width: 324px;
+            height: 84px;
         }
     </style>
 </head>
@@ -60,7 +64,7 @@
         <tr>
             <td class="auto-style4">&nbsp; &nbsp;&nbsp; &nbsp;Besi Adı:</td>
 
-            <td class="auto-style3"><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
+            <td class="auto-style9"><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
         </tr>
 
         <tr>
@@ -91,7 +95,16 @@
             <asp:Label ID="Label1" runat="server" Text="Küpe No:   "></asp:Label>
             <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
         </p>
-        <asp:GridView ID="GridView1" runat="server" Height="229px" Width="620px">
+        <asp:GridView ID="GridView1" runat="server" Height="229px" Width="620px" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+            <FooterStyle BackColor="White" ForeColor="#333333" />
+            <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="White" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F7F7F7" />
+            <SortedAscendingHeaderStyle BackColor="#487575" />
+            <SortedDescendingCellStyle BackColor="#E5E5E5" />
+            <SortedDescendingHeaderStyle BackColor="#275353" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [KUPE_NO], [BESI_ADI], [BESI_CINSI], [DOGUM_TARIHI], [DOGUM_KG] FROM [TBLBESISB]"></asp:SqlDataSource>
     </form>

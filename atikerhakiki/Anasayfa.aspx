@@ -64,7 +64,13 @@
 
        
       </ul>
-    
+    <br /><br /><br /><br /><br /><br />
+   <marquee direction="right"> <img src="images/Atiker 3.jpg"  width="200" height="200"/> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+       <img src="images/Atiker2.png"  width="200" height="200"/>  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+       <img src="images/Ekran Alıntısı.PNG"  width="200" height="200"/> 
+       </marquee>
+      
+         
 
 
   <%-- <nav class="navbar navbar-expand-lg navbar-light bg-light">

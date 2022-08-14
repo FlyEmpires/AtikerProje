@@ -12,8 +12,15 @@ namespace atikerhakiki
     {
         SqlConnection con = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
+
+        // Verileri almak için köprü görevi görür
         SqlDataAdapter adp = new SqlDataAdapter();
+
+        //Satırlar datayı sütunlar veri alanlarını temsil eder
         DataTable dt = new DataTable();
+
+
+        //Veritabanınızdan bağlantısız olan çalışan bir nesnedir
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,8 +44,6 @@ namespace atikerhakiki
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            
-
             dt = new DataTable();
             cmd.CommandText = "Delete from TBLMUHSB where HESAP_KODU='" + TextBox6.Text.ToString() + "'";
             cmd.Connection = con;

@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
+
     <title></title>
     <style type="text/css">
         .auto-style1 {
@@ -15,6 +17,10 @@
     </style>
 </head>
 <body>
+    <ul class="pager">
+  <li></li>
+        <li><a href="Anasayfa.aspx">ANASAYFA</a></li>
+</ul>
     <form id="form1" runat="server">
         <div>
 
@@ -53,13 +59,23 @@
         </div>
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
-                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;<asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="GÜNCELLE" />
+            &nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button2" runat="server" Height="26px" OnClick="Button2_Click" Text="SİL" Width="56px" />
 &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label1" runat="server" Text="ŞUBE  KODU: "></asp:Label>
             <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                 </p>
-        <asp:GridView ID="GridView1" runat="server" Height="150px" Width="284px">
+        <asp:GridView ID="GridView1" runat="server" Height="150px" Width="284px" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
+            <AlternatingRowStyle BackColor="PaleGoldenrod" />
+            <FooterStyle BackColor="Tan" />
+            <HeaderStyle BackColor="Tan" Font-Bold="True" />
+            <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+            <SortedAscendingCellStyle BackColor="#FAFAE7" />
+            <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+            <SortedDescendingCellStyle BackColor="#E1DB9C" />
+            <SortedDescendingHeaderStyle BackColor="#C2A47B" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [KASA_KODU], [KASA_TANIMI], [SUBE_KODU], [DOVIZLI_MI], [POS_ODEME_TIPI] FROM [TBLKASASB]" OnSelecting="SqlDataSource2_Selecting"></asp:SqlDataSource>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>

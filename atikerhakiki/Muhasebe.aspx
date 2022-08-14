@@ -69,7 +69,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="Button2" runat="server" Height="27px" OnClick="Button2_Click" Text="SİL" Width="89px" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Label ID="Label1" runat="server" Text="İŞLETME NO: "></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Text="HESAP KODU: "></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
         </p>

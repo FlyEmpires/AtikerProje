@@ -60,5 +60,15 @@ namespace atikerhakiki
         {
 
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            cmd.CommandText = "Update TBLKASASB set KASA_TANIMI ='" + TextBox2.Text.ToString() + "',SUBE_KODU ='" + TextBox3.Text.ToString() + "',DOVIZLI_MI='" + TextBox4.Text.ToString() + "',POS_ODEME_TIPI='" + TextBox5.Text.ToString() + "' where KASA_KODU='" + TextBox1.Text.ToString() + "' ";
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            listeleme();
+                 
+        }
     }
 }
