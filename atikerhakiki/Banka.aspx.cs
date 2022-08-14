@@ -18,7 +18,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -47,6 +47,20 @@ namespace atikerhakiki
 
             con.Close();
         }
+
+        public void listeleme2()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "select GIREN_TUTAR, CIKAN_TUTAR, BANKA_ACIKLAMA,YEVMIYE_ACIKLAMA from TBLBANKHR where BANKA_HESAP_KODU_RECID='" + TextBox7.Text.ToString() + "'";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView2.DataSource = ds;
+            GridView2.DataBind();
+
+            con.Close();
+        } 
         protected void Button2_Click(object sender, EventArgs e)
         {
 
@@ -55,6 +69,21 @@ namespace atikerhakiki
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            listeleme2();
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            cmd.CommandText = "Update TBLBANKASB set BANKA_HESAP_ISIM='" + TextBox2.Text.ToString() + "',IBAN_NO='" + TextBox3.Text.ToString() + "',BANKA_HESAP_TIPI='" + TextBox4.Text.ToString() + "',BANKA_TELEFON='" + TextBox5.Text.ToString() + "' where BANKA_HESAP_KODU='" + TextBox8.Text.ToString() + "' ";
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            listeleme();
+
         }
     }
 }

@@ -74,7 +74,9 @@
 
         <tr>
             <td class="auto-style1">&nbsp &nbsp &nbsp Doğum Tarihi:</td>
-            <td class="auto-style6"><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></td>
+            <td class="auto-style6"><asp:TextBox ID="TextBox4" runat="server" TextMode="DateTime"></asp:TextBox>
+                <asp:Calendar ID="Calendar1" runat="server" OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
+            </td>
         </tr>
 
         <tr>

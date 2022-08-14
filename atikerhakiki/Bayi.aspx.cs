@@ -18,7 +18,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -50,6 +50,15 @@ namespace atikerhakiki
         {
             dt = new DataTable();
             cmd.CommandText = "Delete from TBLCRM_BAYISB where BAYI_KODU='" + TextBox6.Text.ToString() + "'";
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            listeleme();
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            dt = new DataTable();
+            cmd.CommandText = "Update TBLCRM_BAYISB set BAYI_ISIM='" + TextBox2.Text.ToString() + "',FIRMA_ADI='" + TextBox3.Text.ToString() + "',VERGI_NO='" + TextBox4.Text.ToString() + "',BAYI_YETKILI='" + TextBox5.Text.ToString() + "' where BAYI_KODU='" + TextBox7.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();

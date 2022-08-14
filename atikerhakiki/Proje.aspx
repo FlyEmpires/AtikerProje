@@ -46,8 +46,8 @@
         <tr>
             <td class="auto-style5">&nbsp; &nbsp; &nbsp; Başlama Tarihi</td>
             <td class="auto-style5">
-                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="220px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="400px">
+                <asp:TextBox ID="TextBox5" runat="server" TextMode="DateTime"></asp:TextBox>
+                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="220px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="400px" OnSelectionChanged="Calendar1_SelectionChanged">
                     <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" ForeColor="#333333" Height="10pt" />
                     <DayStyle Width="14%" />
                     <NextPrevStyle Font-Size="8pt" ForeColor="White" />
@@ -69,8 +69,8 @@
             <td>&nbsp; &nbsp; &nbsp;
                 Teslim Tarihi</td>
             <td>
-                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-                <asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="220px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="400px">
+                <asp:TextBox ID="TextBox6" runat="server" TextMode="DateTime"></asp:TextBox>
+                <asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="220px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="400px" OnSelectionChanged="Calendar2_SelectionChanged">
                     <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" ForeColor="#333333" Height="10pt" />
                     <DayStyle Width="14%" />
                     <NextPrevStyle Font-Size="8pt" ForeColor="White" />
@@ -86,7 +86,13 @@
     </table>
         </div>
         <asp:Button ID="Button1" runat="server" Height="84px" OnClick="Button1_Click" Text="KAYDET" Width="149px" />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button3" runat="server" Height="77px" OnClick="Button3_Click" Text="Button" Width="117px" />
+&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label2" runat="server" Text="PROJE KODU: "></asp:Label>
+&nbsp;
+        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label1" runat="server" Text="PROJE KODU:  "></asp:Label>
 &nbsp;<asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -58,10 +58,16 @@ namespace atikerhakiki
         protected void Button3_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLBESISB set BESI_ADI='" + TextBox2.Text.ToString() + "',BESI_CINSI='" + TextBox3.Text.ToString() + "',DOGUM_TARIHI='" + TextBox4.Text.ToString() + "',DOGUM_KG='" + TextBox5.Text.ToString() + "' where KUPE_NO='" + TextBox1.Text.ToString() + "' ";
+            cmd.CommandText = "Update TBLBESISB set BESI_ADI='" + TextBox2.Text.ToString() + "',BESI_CINSI='" + TextBox3.Text.ToString() + "',DOGUM_TARIHI='" + Convert.ToDateTime( Convert.ToString( TextBox4.Text)).ToString("yyyyMMdd") + "',DOGUM_KG='" + TextBox5.Text.ToString() + "' where KUPE_NO='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
+
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            TextBox4.Text = (Calendar1.SelectedDate.ToShortDateString());
 
         }
     }

@@ -18,7 +18,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-8JR0EVC\MSSQLSERVER02;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -47,6 +47,19 @@ namespace atikerhakiki
 
             con.Close();
         }
+        public void listeleme2()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "select KASA_ACIKLAMA as 'KASA AÇIKLAMA', YEVMIYE_ACIKLAMA, GIREN_TUTAR,CIKAN_TUTAR,BELGE_NO from TBLKASAHR where KASA_KODU_RECID='" + TextBox7.Text.ToString() + "'";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView2.DataSource = ds;
+            GridView2.DataBind();
+
+            con.Close();
+        }
         protected void Button2_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
@@ -69,6 +82,11 @@ namespace atikerhakiki
             cmd.ExecuteNonQuery();
             listeleme();
                  
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            listeleme2();
         }
     }
 }
