@@ -105,6 +105,7 @@
     <Content Include="Kayıt2.aspx" />
     <Content Include="ksyıt.aspx" />
     <Content Include="Muhasebe.aspx" />
+    <Content Include="MuhasebeFıs.aspx" />
     <Content Include="Proje.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -155,6 +156,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet10.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -224,6 +230,13 @@
     <Compile Include="Muhasebe.aspx.designer.cs">
       <DependentUpon>Muhasebe.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MuhasebeFıs.aspx.cs">
+      <DependentUpon>MuhasebeFıs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MuhasebeFıs.aspx.designer.cs">
+      <DependentUpon>MuhasebeFıs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Proje.aspx.cs">
       <DependentUpon>Proje.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,6 +268,17 @@
     </Content>
     <Content Include="DataSet2.xsc">
       <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Content>
+    <Content Include="DataSet10.xsc">
+      <DependentUpon>DataSet10.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet10.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet10.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet10.xss">
+      <DependentUpon>DataSet10.xsd</DependentUpon>
     </Content>
     <None Include="DataSet2.xsd">
       <SubType>Designer</SubType>

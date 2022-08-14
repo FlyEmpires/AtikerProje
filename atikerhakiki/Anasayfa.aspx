@@ -42,7 +42,7 @@
           <a href="#">Menü 2</a>
           <ul class="submenu">
             <li><a href="Cari.aspx">Cari Kartlar</a></li>
-            <li><a href="Muhasebe.aspx">İşletme Muhasebe</a></li>
+            <li><a href="Muhasebe.aspx">Muhasebe</a></li>
             <li><a href="Banka.aspx">Banka Hareket</a></li>
             <li><a href="Proje.aspx">Proje</a></li>
           </ul>			
@@ -51,7 +51,7 @@
           <a href="#">Menü 3</a>
           <ul class="submenu">
             <li><a href="Bayi.aspx">Bayi</a></li>
-            <li><a href="Muhasebe.aspx">Muhasebe</a></li>
+            <li><a href="MuhasebeFıs.aspx">Muhasebe Fiş</a></li>
            
           </ul>			
         </li>
