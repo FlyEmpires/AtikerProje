@@ -25,14 +25,24 @@ namespace atikerhakiki
                 listeleme();
             }
         }
-
+      
+         
+        
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
-            DataSet8TableAdapters.TBLCARISBTableAdapter dt = new DataSet8TableAdapters.TBLCARISBTableAdapter();
-            dt.CariEkle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text);
+            try
+            {
+
+                DataSet8TableAdapters.TBLCARISBTableAdapter dt = new DataSet8TableAdapters.TBLCARISBTableAdapter();
+                dt.CariEkle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text);
+            }
+            catch (Exception)
+            {
+                Response.Write("<script>alert('AYNI CARİ KODUNDAN TEKRAR GİRELEMEZ')</script>");
+                //Label1.Text = "AYNI CARİ KODUNDAN TEKRAR GİRİLEMEZ";
+
+            }
             listeleme();
-        
 
 
         }
@@ -65,19 +75,19 @@ namespace atikerhakiki
         protected void Button2_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLCARISB set CARI_ADI='"+TextBox2.Text.ToString()+"',CARI_KISA_ISIM='"+TextBox3.Text.ToString()+"',CARI_IL='"+TextBox4.Text.ToString()+"',CARI_ILCE='"+TextBox5.Text.ToString()+"' where CARI_KODU='"+TextBox1.Text.ToString()+"' ";
+            cmd.CommandText = "Update TBLCARISB set CARI_ADI='" + TextBox2.Text.ToString() + "',CARI_KISA_ISIM='" + TextBox3.Text.ToString() + "',CARI_IL='" + TextBox4.Text.ToString() + "',CARI_ILCE='" + TextBox5.Text.ToString() + "' where CARI_KODU='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
-         
-           
-        
+
+
+
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLCARISB where CARI_KODU='" + TextBox6.Text.ToString()+"'";
+            cmd.CommandText = "Delete from TBLCARISB where CARI_KODU='" + TextBox6.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -93,5 +103,9 @@ namespace atikerhakiki
         {
             listeleme2();
         }
+
+
+
+
     }
 }

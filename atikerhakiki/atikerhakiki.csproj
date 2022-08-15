@@ -92,6 +92,7 @@
     <Content Include="css\owl.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\site.css" />
+    <Content Include="css\StyleSheet1.css" />
     <Content Include="images\Atiker 3.jpg" />
     <Content Include="images\atiker.jpg" />
     <Content Include="images\Atiker2.png" />
