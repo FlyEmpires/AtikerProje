@@ -36,7 +36,7 @@
 
         <tr>
             <td>&nbsp &nbsp &nbsp Kayıt Tarihi:</td>
-            <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+            <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp; </td>
 
 <%--            <td><input type="text" class="bosluk" name="no" placeholder="Lütfen Stok No Giriniz"/></td>--%>
         </tr>
@@ -44,12 +44,14 @@
         <tr>
             <td class="auto-style4">&nbsp; &nbsp;&nbsp; &nbsp;Kullanıcı Adı:</td>
 
-            <td class="auto-style4"><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
+            <td class="auto-style4"><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="GETİR" />
+            </td>
         </tr>
 
         <tr>
             <td class="auto-style5">&nbsp &nbsp &nbsp Araç Plaka:</td>
-            <td class="auto-style5"><asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></td>
+            <td class="auto-style5"><asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp; </td>
         </tr>
 
         <tr>

@@ -32,7 +32,6 @@
         <tr>
             <td>&nbsp &nbsp &nbsp Stok Adı :</td>
             <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Button" />
             </td>
 
 <%--            <td><input type="text" class="bosluk" name="no" placeholder="Lütfen Stok No Giriniz"/></td>--%>
@@ -51,7 +50,9 @@
 
         <tr>
             <td>&nbsp &nbsp &nbsp Stok Kodu :</td>
-            <td><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></td>
+            <td><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="GETİR" />
+            </td>
         </tr>
 
         <tr>

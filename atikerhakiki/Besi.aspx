@@ -56,7 +56,9 @@
 
         <tr>
             <td>&nbsp &nbsp &nbsp Küpe NO:</td>
-            <td class="auto-style3"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+            <td class="auto-style3"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="GETİR" />
+            </td>
 
 <%--            <td><input type="text" class="bosluk" name="no" placeholder="Lütfen Stok No Giriniz"/></td>--%>
         </tr>

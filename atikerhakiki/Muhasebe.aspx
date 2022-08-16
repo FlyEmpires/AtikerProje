@@ -10,12 +10,18 @@
         .auto-style1 {
             width: 170px;
         }
-        .auto-style2 {
-            width: 172px;
-        }
         .auto-style3 {
             width: 611px;
             height: 211px;
+        }
+        .auto-style4 {
+            width: 169px;
+        }
+        .auto-style5 {
+            width: 168px;
+        }
+        .auto-style6 {
+            width: 196px
         }
     </style>
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
@@ -32,7 +38,7 @@
 
         <tr>
             <td>&nbsp &nbsp &nbsp İşletme NO:</td>
-            <td class="auto-style2"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+            <td class="auto-style6"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
 
 <%--            <td><input type="text" class="bosluk" name="no" placeholder="Lütfen Stok No Giriniz"/></td>--%>
         </tr>
@@ -40,23 +46,24 @@
         <tr>
             <td class="auto-style4">&nbsp; &nbsp;&nbsp; &nbsp;Hesap Kodu:</td>
 
-            <td class="auto-style2"><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
+            <td class="auto-style6"><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>&nbsp;<asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="GETİR" />
+            </td>
         </tr>
 
         <tr>
             <td class="auto-style5">&nbsp &nbsp &nbsp Hesap Sınıf Kodu:</td>
-            <td class="auto-style2"><asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></td>
+            <td class="auto-style6"><asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></td>
         </tr>
 
         <tr>
             <td class="auto-style1">&nbsp &nbsp &nbsp Hesap Grup Kodu:</td>
-            <td class="auto-style2"><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></td>
+            <td class="auto-style6"><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></td>
         </tr>
 
         <tr>
             <td>&nbsp; &nbsp; &nbsp;
                 Hesap Tipi:</td>
-            <td class="auto-style2"><asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></td>
+            <td class="auto-style6"><asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></td>
         </tr>
 
     </table>

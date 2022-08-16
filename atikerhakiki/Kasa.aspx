@@ -14,6 +14,13 @@
         .auto-style3 {
             height: 26px;
         }
+        .auto-style4 {
+            margin-right: 61;
+        }
+        .auto-style5 {
+            width: 418px;
+            height: 150px;
+        }
     </style>
 </head>
 <body>
@@ -24,11 +31,13 @@
     <form id="form1" runat="server">
         <div>
 
-             <table class="auto-style6" border="1">
+             <table class="auto-style5" border="1">
 
         <tr>
             <td>&nbsp &nbsp &nbsp Kasa Kodu:</td>
-            <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+            <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>&nbsp;&nbsp;
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="GETİR" />
+            </td>
 
 <%--            <td><input type="text" class="bosluk" name="no" placeholder="Lütfen Stok No Giriniz"/></td>--%>
         </tr>
@@ -46,13 +55,13 @@
 
         <tr>
             <td class="auto-style1">&nbsp &nbsp &nbsp Dövizli mi:</td>
-            <td class="auto-style1"><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></td>
+            <td class="auto-style1"><asp:TextBox ID="TextBox4" runat="server" Height="29px" Width="118px"></asp:TextBox></td>
         </tr>
 
         <tr>
             <td class="auto-style3">&nbsp; &nbsp; &nbsp;
                 Pos Ödeme Tipi</td>
-            <td class="auto-style3"><asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></td>
+            <td class="auto-style3"><asp:TextBox ID="TextBox5" runat="server" CssClass="auto-style4"></asp:TextBox></td>
         </tr>
 
     </table>

@@ -12,11 +12,11 @@
                       height: 77px;
                   }
                   .auto-style2 {
-                      width: 128px;
+                      width: 225px;
                   }
                   .auto-style3 {
                       height: 77px;
-                      width: 128px;
+                      width: 225px;
                   }
                   .auto-style6 {
                       height: 272px;
@@ -35,7 +35,9 @@
 
         <tr>
             <td>&nbsp; &nbsp; &nbsp; Banka Hesap Kodu</td>
-            <td class="auto-style2"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+            <td class="auto-style2"><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="GETİR" />
+            </td>
 
 <%--            <td><input type="text" class="bosluk" name="no" placeholder="Lütfen Stok No Giriniz"/></td>--%>
         </tr>

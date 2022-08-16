@@ -25,7 +25,7 @@ namespace atikerhakiki
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -123,14 +123,24 @@ namespace atikerhakiki
 
         protected void Button5_Click(object sender, EventArgs e)
         {
-            GridViewRow row = GridView1.SelectedRow;
-            int index = GridView1.SelectedRow.RowIndex;
-            TextBox lblValuename = (TextBox)row.FindControl("TextBox1");
-            TextBox lblValueCountry = (TextBox)row.FindControl("TextBox2");
-            string message = "Row Index: " + index + "\\nName: " + lblValuename.Text + "\\nCountry: " + lblValueCountry.Text;
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
+            var command = "SELECT * FROM TBLSTOKSB WHERE STOK_KODU = '" + TextBox4.Text + "'";
+
+            SqlCommand _cmd = new SqlCommand(command, con);
+            var _rd = _cmd.ExecuteReader();
+            _rd.Read();
+            if (_rd.HasRows)
+            {
+
+                TextBox1.Text = _rd.GetValue(11).ToString();
+                TextBox2.Text = _rd.GetValue(13).ToString();
+                TextBox3.Text = _rd.GetValue(14).ToString();
+                TextBox5.Text = _rd.GetValue(68).ToString();
 
 
+            }
         }
+
+
     }
+    
 }

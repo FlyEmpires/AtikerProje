@@ -24,7 +24,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
            
@@ -76,6 +76,25 @@ namespace atikerhakiki
         protected void Button4_Click(object sender, EventArgs e)
         {
             listeleme2();
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            var command = "SELECT * FROM TBLMUHSB WHERE HESAP_KODU = '" + TextBox2.Text + "'";
+
+            SqlCommand _cmd = new SqlCommand(command, con);
+            var _rd = _cmd.ExecuteReader();
+            _rd.Read();
+            if (_rd.HasRows)
+            {
+
+                TextBox1.Text = _rd.GetValue(10).ToString();
+                TextBox3.Text = _rd.GetValue(14).ToString();
+                TextBox4.Text = _rd.GetValue(15).ToString();
+                TextBox5.Text = _rd.GetValue(17).ToString();
+
+
+            }
         }
     }
 }
