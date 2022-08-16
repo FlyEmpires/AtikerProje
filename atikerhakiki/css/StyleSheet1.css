@@ -4,18 +4,26 @@
 .tablo {
     margin-left:550px;
     margin-top:-420px;
+    
 
+}
+.muhfıstablo
+{
+    margin-left:550px;
+    margin-top:-270px;
 }
 .butonlar{
     margin-left:20px;
     margin-top:85px;
+    padding-left:10px;
+    padding-bottom:-100px;
 }
 .grid2{
 
     margin-top:100px;
 }
 .hareketlerbuton{
-    margin-top:125px;
+    margin-top:160px;
     margin-left:-360px;
 }
 texbox{

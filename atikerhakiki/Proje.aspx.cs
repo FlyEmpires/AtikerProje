@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -48,12 +48,25 @@ namespace atikerhakiki
             dt.ProjeEkle(TextBox1.Text, TextBox2.Text, Convert.ToDateTime(TextBox5.Text), Convert.ToInt32(TextBox4.Text), Convert.ToDateTime(TextBox6.Text));
             listeleme();
         }
+        public void listeleme2()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "select PROJE_KODU, PROJE_ADI, PROJE_SIPARIS_NO,PROJE_AKTIF,ACIK_SUBELER from TBL_PROJE_DOSYAHR where PROJE_KODU='" + TextBox9.Text.ToString() + "'";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView2.DataSource = ds;
+            GridView2.DataBind();
+
+            con.Close();
+        }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
 
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLPROJEDOSYA where PROJE_KODU='" + TextBox7.Text.ToString() + "'";
+            cmd.CommandText = "Delete from TBLPROJEDOSYA where PROJE_KODU='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -73,10 +86,20 @@ namespace atikerhakiki
         protected void Button3_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLPROJEDOSYA set PROJE_ADI='" + TextBox2.Text.ToString() + "',PROJE_BASLAMA_TARIHI='" + Convert.ToDateTime(Convert.ToString(TextBox5.Text)).ToString("yyyyMMdd") + "',PROJE_AKTIF='" + TextBox4.Text.ToString() + "',PROJE_TESLIM_TARIHI='" + Convert.ToDateTime(Convert.ToString(TextBox6.Text)).ToString("yyyyMMdd") + "' where PROJE_KODU='" + TextBox8.Text.ToString() + "' ";
+            cmd.CommandText = "Update TBLPROJEDOSYA set PROJE_ADI='" + TextBox2.Text.ToString() + "',PROJE_BASLAMA_TARIHI='" + Convert.ToDateTime(Convert.ToString(TextBox5.Text)).ToString("yyyyMMdd") + "',PROJE_AKTIF='" + TextBox4.Text.ToString() + "',PROJE_TESLIM_TARIHI='" + Convert.ToDateTime(Convert.ToString(TextBox6.Text)).ToString("yyyyMMdd") + "' where PROJE_KODU='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        protected void Button4_Click1(object sender, EventArgs e)
+        {
+            listeleme2();
         }
     }
 }

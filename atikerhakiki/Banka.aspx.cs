@@ -18,7 +18,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -65,7 +65,7 @@ namespace atikerhakiki
         {
 
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLBANKASB where BANKA_HESAP_KODU='" + TextBox6.Text.ToString() + "'";
+            cmd.CommandText = "Delete from TBLBANKASB where BANKA_HESAP_KODU='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -79,7 +79,7 @@ namespace atikerhakiki
         protected void Button4_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLBANKASB set BANKA_HESAP_ISIM='" + TextBox2.Text.ToString() + "',IBAN_NO='" + TextBox3.Text.ToString() + "',BANKA_HESAP_TIPI='" + TextBox4.Text.ToString() + "',BANKA_TELEFON='" + TextBox5.Text.ToString() + "' where BANKA_HESAP_KODU='" + TextBox8.Text.ToString() + "' ";
+            cmd.CommandText = "Update TBLBANKASB set BANKA_HESAP_ISIM='" + TextBox2.Text.ToString() + "',IBAN_NO='" + TextBox3.Text.ToString() + "',BANKA_HESAP_TIPI='" + TextBox4.Text.ToString() + "',BANKA_TELEFON='" + TextBox5.Text.ToString() + "' where BANKA_HESAP_KODU='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();

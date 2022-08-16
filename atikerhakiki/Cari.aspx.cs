@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -74,6 +74,7 @@ namespace atikerhakiki
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+     
             dt = new DataTable();
             cmd.CommandText = "Update TBLCARISB set CARI_ADI='" + TextBox2.Text.ToString() + "',CARI_KISA_ISIM='" + TextBox3.Text.ToString() + "',CARI_IL='" + TextBox4.Text.ToString() + "',CARI_ILCE='" + TextBox5.Text.ToString() + "' where CARI_KODU='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
@@ -81,13 +82,12 @@ namespace atikerhakiki
             listeleme();
 
 
-
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLCARISB where CARI_KODU='" + TextBox6.Text.ToString() + "'";
+            cmd.CommandText = "Delete from TBLCARISB where CARI_KODU='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();

@@ -18,7 +18,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -33,6 +33,20 @@ namespace atikerhakiki
             dt.BayiEkle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text);
             listeleme();
         }
+        public void listeleme2()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "select BAYI_KODU, BAYI_GELIR, BAYI_GIDER,BAYI_ACIKLAMA,BAYI_TELEFON from TBLBAYIHR where BAYI_KODU='" + TextBox8.Text.ToString() + "'";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView2.DataSource = ds;
+            GridView2.DataBind();
+
+            con.Close();
+        }
+
         public void listeleme()
         {
             ds = new DataSet();
@@ -49,7 +63,7 @@ namespace atikerhakiki
         protected void Button2_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLCRM_BAYISB where BAYI_KODU='" + TextBox6.Text.ToString() + "'";
+            cmd.CommandText = "Delete from TBLCRM_BAYISB where BAYI_KODU='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -58,10 +72,15 @@ namespace atikerhakiki
         protected void Button3_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLCRM_BAYISB set BAYI_ISIM='" + TextBox2.Text.ToString() + "',FIRMA_ADI='" + TextBox3.Text.ToString() + "',VERGI_NO='" + TextBox4.Text.ToString() + "',BAYI_YETKILI='" + TextBox5.Text.ToString() + "' where BAYI_KODU='" + TextBox7.Text.ToString() + "' ";
+            cmd.CommandText = "Update TBLCRM_BAYISB set BAYI_ISIM='" + TextBox2.Text.ToString() + "',FIRMA_ADI='" + TextBox3.Text.ToString() + "',VERGI_NO='" + TextBox4.Text.ToString() + "',BAYI_YETKILI='" + TextBox5.Text.ToString() + "' where BAYI_KODU='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            listeleme2();
         }
     }
 }

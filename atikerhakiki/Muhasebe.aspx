@@ -91,7 +91,14 @@
             <SortedDescendingCellStyle BackColor="#F1E5CE" />
             <SortedDescendingHeaderStyle BackColor="#93451F" />
         </asp:GridView>
+        <br />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
+&nbsp;<asp:Label ID="Label2" runat="server" Text="HESAP KODU: "></asp:Label>
+        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        <asp:GridView ID="GridView2" runat="server" Height="183px" Width="390px">
+        </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [ISLETME_NO], [HESAP_KODU], [HESAP_SINIF_KODU], [HESAP_GRUP_KODU], [HESAP_TIPI] FROM [TBLMUHSB]"></asp:SqlDataSource>
+        <br />
     </form>
 </body>
 </html>

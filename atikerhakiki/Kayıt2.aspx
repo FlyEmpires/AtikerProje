@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
-
+                 <link href="css/StyleSheet1.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -21,7 +21,9 @@
         }
     </style>
 </head>
+
 <body>
+
      <ul class="pager">
   <li></li>
         <li><a href="Anasayfa.aspx">ANASAYFA</a></li>
@@ -96,6 +98,16 @@
             <SortedAscendingHeaderStyle BackColor="#246B61" />
             <SortedDescendingCellStyle BackColor="#D4DFE1" />
             <SortedDescendingHeaderStyle BackColor="#15524A" />
+        </asp:GridView>
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
+        &nbsp;
+        <asp:Label ID="Label2" runat="server" Text="STOK KODU: "></asp:Label>
+&nbsp;
+        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+        <asp:GridView ID="GridView2" runat="server" Height="166px" Width="553px">
         </asp:GridView>
     </form>
 </body>

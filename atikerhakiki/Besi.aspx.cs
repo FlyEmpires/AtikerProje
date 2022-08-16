@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -33,7 +33,7 @@ namespace atikerhakiki
             listeleme();
 
         }
-        public void listeleme()
+        public void listeleme()// VERİ ÇEKME
         {
             ds = new DataSet();
             cmd.CommandText = "select KUPE_NO, BESI_ADI, BESI_CINSI,DOGUM_TARIHI,DOGUM_KG from TBLBESISB";
@@ -46,6 +46,20 @@ namespace atikerhakiki
 
             con.Close();
         }
+        public void listeleme2()// HAREKETLERİ LİSTELEME
+        {
+            ds = new DataSet();
+            cmd.CommandText = "select KUPE_NO, BESI_FIYAT, BESI_ADET,BESI_ACIKLAMA,BESI_DRM from TBL_BESIHR where KUPE_NO='" + TextBox1.Text.ToString() + "'";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView2.DataSource = ds;
+            GridView2.DataBind();
+
+            con.Close();
+        }
+
         protected void Button2_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
@@ -58,7 +72,7 @@ namespace atikerhakiki
         protected void Button3_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLBESISB set BESI_ADI='" + TextBox2.Text.ToString() + "',BESI_CINSI='" + TextBox3.Text.ToString() + "',DOGUM_TARIHI='" + Convert.ToDateTime( Convert.ToString( TextBox4.Text)).ToString("yyyyMMdd") + "',DOGUM_KG='" + TextBox5.Text.ToString() + "' where KUPE_NO='" + TextBox1.Text.ToString() + "' ";
+            cmd.CommandText = "Update TBLBESISB set BESI_ADI='" + TextBox2.Text.ToString() + "',BESI_CINSI='" + TextBox3.Text.ToString() + "',DOGUM_TARIHI='" + Convert.ToDateTime( Convert.ToString( TextBox4.Text)).ToString("yyyyMMdd") + "',DOGUM_KG='" + TextBox5.Text.ToString() + "' where KUPE_NO='" + TextBox6.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -69,6 +83,11 @@ namespace atikerhakiki
         {
             TextBox4.Text = (Calendar1.SelectedDate.ToShortDateString());
 
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            listeleme2();
         }
     }
 }

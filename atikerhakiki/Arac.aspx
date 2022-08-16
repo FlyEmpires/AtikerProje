@@ -85,6 +85,17 @@
                 <SortedDescendingHeaderStyle BackColor="#C2A47B" />
             </asp:GridView>
         </p>
+        <p>
+            <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
+&nbsp;&nbsp;
+            <asp:Label ID="Label1" runat="server" Text="RECNO:  "></asp:Label>
+            <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        </p>
+        <p>
+            &nbsp;</p>
+
+        <asp:GridView ID="GridView2" runat="server" Height="217px" Width="791px">
+        </asp:GridView>
 
     </form>
     

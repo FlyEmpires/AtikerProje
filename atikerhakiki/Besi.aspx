@@ -109,6 +109,15 @@
             <SortedDescendingHeaderStyle BackColor="#275353" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [KUPE_NO], [BESI_ADI], [BESI_CINSI], [DOGUM_TARIHI], [DOGUM_KG] FROM [TBLBESISB]"></asp:SqlDataSource>
+        <br />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
+&nbsp;&nbsp;
+        <asp:Label ID="Label2" runat="server" Text="Küpe No: "></asp:Label>
+        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:GridView ID="GridView2" runat="server" Height="131px" Width="562px">
+        </asp:GridView>
     </form>
 </body>
 </html>

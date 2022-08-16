@@ -18,7 +18,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -63,7 +63,7 @@ namespace atikerhakiki
         protected void Button2_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLKASASB where KASA_KODU='" + TextBox6.Text.ToString() + "'";
+            cmd.CommandText = "Delete from TBLKASASB where KASA_KODU='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();

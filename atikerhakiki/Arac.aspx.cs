@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -41,18 +41,34 @@ namespace atikerhakiki
             adp = new SqlDataAdapter(cmd);
             adp.Fill(ds);
             cmd.ExecuteNonQuery();
+            
             GridView1.DataSource = ds;
             GridView1.DataBind();
 
             con.Close();
         }
 
+        public void listeleme2()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "SELECT ARAC_PLAKA, ARAC_GELIR, ARAC_GIDER, ARAC_SAHIP, ARAC_GIRIS_TARIHI FROM TBLARACHR where REC_NO='" + TextBox7.Text.ToString() + "'";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView2.DataSource = ds;
+            GridView2.DataBind();
+
+            con.Close();
+        }
+
+
         protected void Button2_Click(object sender, EventArgs e)
         {
 
 
             dt = new DataTable();
-            cmd.CommandText = "DELETE FROM TBLARACSB WHERE REC_NO = '" + TextBox6.Text.ToString() + "'";
+            cmd.CommandText = "DELETE FROM TBLARACSB WHERE REC_NO = '" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -62,11 +78,16 @@ namespace atikerhakiki
         protected void Button3_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLARACSB set REC_DATE='" + TextBox1.Text.ToString() + "',REC_USERNAME='" + TextBox2.Text.ToString() + "',ARAC_MODEL='" + TextBox4.Text.ToString() + "',ARAC_MARKA='" + TextBox5.Text.ToString() + "' where ARAC_PLAKA='" + TextBox3.Text.ToString() + "' ";
+            cmd.CommandText = "Update TBLARACSB set REC_DATE='" + TextBox1.Text.ToString() + "',REC_USERNAME='" + TextBox2.Text.ToString() + "',ARAC_MODEL='" + TextBox4.Text.ToString() + "',ARAC_MARKA='" + TextBox5.Text.ToString() + "' where ARAC_PLAKA='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
 
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            listeleme2();
         }
     }
 }

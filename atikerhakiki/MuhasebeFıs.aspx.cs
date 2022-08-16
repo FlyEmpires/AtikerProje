@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -35,6 +35,19 @@ namespace atikerhakiki
             cmd.ExecuteNonQuery();
             GridView1.DataSource = ds;
             GridView1.DataBind();
+
+            con.Close();
+        }
+        public void listeleme2()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "select SUBE_KODU, LIST_NO, TARIH,FISNUM,AY_KODU from TBLMUHFISHR where FISNUM='" + TextBox8.Text.ToString() + "'";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView2.DataSource = ds;
+            GridView2.DataBind();
 
             con.Close();
         }
@@ -61,7 +74,7 @@ namespace atikerhakiki
         protected void Button2_Click1(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLMUHFISSB set BELGE_NO='" + TextBox1.Text.ToString() + "',TARIH='" + TextBox3.Text.ToString() + "',FISTIPI='" + TextBox4.Text.ToString() + "',AY_KODU='" + TextBox5.Text.ToString() + "' where FISNUM='" + TextBox6.Text.ToString() + "' ";
+            cmd.CommandText = "Update TBLMUHFISSB set BELGE_NO='" + TextBox1.Text.ToString() + "',TARIH='" + TextBox3.Text.ToString() + "',FISTIPI='" + TextBox4.Text.ToString() + "',AY_KODU='" + TextBox5.Text.ToString() + "' where FISNUM='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -70,10 +83,15 @@ namespace atikerhakiki
         protected void Button3_Click1(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLMUHFISSB where FISNUM='" + TextBox7.Text.ToString() + "'";
+            cmd.CommandText = "Delete from TBLMUHFISSB where FISNUM='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            listeleme2();
         }
     }
     }

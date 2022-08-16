@@ -25,7 +25,7 @@ namespace atikerhakiki
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -56,7 +56,22 @@ namespace atikerhakiki
             GridView1.DataBind();
 
             con.Close();
+        }           
+
+    public void listeleme2()
+        {
+            ds = new DataSet();
+            cmd.CommandText = "SELECT TARIH, BELGE_NO, BELGESB_RECNO, BELGE_TIPI, SUBE_KODU FROM TBLSTOKHR where STOK_KODU_RECID='" + TextBox8.Text.ToString() + "'";
+            cmd.Connection = con;
+            adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds);
+            cmd.ExecuteNonQuery();
+            GridView2.DataSource = ds;
+            GridView2.DataBind();
+
+            con.Close();
         }
+
         protected void Button2_Click(object sender, EventArgs e)
         {
             //OleDbCommand sil_sql = new OleDbCommand();
@@ -80,7 +95,7 @@ namespace atikerhakiki
 
 
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLSTOKSB WHERE REC_NO='" + TextBox6.Text.ToString()+"'";
+            cmd.CommandText = "Delete from TBLSTOKSB WHERE REC_NO='" + TextBox1.Text.ToString()+"'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -95,10 +110,15 @@ namespace atikerhakiki
         protected void Button3_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLSTOKSB set STOK_ADI='" + TextBox1.Text.ToString() + "',STOK_TIPI='" + TextBox2.Text.ToString() + "',STOK_KISA_ADI='" + TextBox3.Text.ToString() + "',PERAKENDE_ALIS_KDV='" + TextBox5.Text.ToString() + "' where STOK_KODU='" + TextBox7.Text.ToString() + "' ";
+            cmd.CommandText = "Update TBLSTOKSB set STOK_ADI='" + TextBox1.Text.ToString() + "',STOK_TIPI='" + TextBox2.Text.ToString() + "',STOK_KISA_ADI='" + TextBox3.Text.ToString() + "',PERAKENDE_ALIS_KDV='" + TextBox5.Text.ToString() + "' where STOK_KODU='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            listeleme2();
         }
     }
 }

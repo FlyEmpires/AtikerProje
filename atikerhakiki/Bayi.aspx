@@ -118,7 +118,17 @@
                 <SortedDescendingCellStyle BackColor="#EAEAD3" />
                 <SortedDescendingHeaderStyle BackColor="#575357" />
             </asp:GridView>
+        </p>
+        <p>
+            <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Button" />
+            <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
+        </p>
+        <p>
+            <asp:GridView ID="GridView2" runat="server" Height="176px" Width="615px">
+            </asp:GridView>
+        </p>
+        <p>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [BAYI_KODU], [BAYI_ISIM], [FIRMA_ADI], [VERGI_NO] FROM [TBLCRM_BAYISB]"></asp:SqlDataSource>
         </p>
     </form>

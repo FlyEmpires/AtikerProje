@@ -87,7 +87,7 @@
         </div>
         <asp:Button ID="Button1" runat="server" Height="84px" OnClick="Button1_Click" Text="KAYDET" Width="149px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" Height="77px" OnClick="Button3_Click" Text="Button" Width="117px" />
+        <asp:Button ID="Button3" runat="server" Height="77px" OnClick="Button3_Click" Text="GÜNCELLEME" Width="117px" />
 &nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label2" runat="server" Text="PROJE KODU: "></asp:Label>
 &nbsp;
@@ -100,7 +100,15 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
                 <asp:GridView ID="GridView1" runat="server" Height="220px" Width="696px">
         </asp:GridView>
+        <br />
+        <br />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click1" Text="HAREKETLER" />
+&nbsp;<asp:Label ID="Label3" runat="server" Text="PROJE_KODU"></asp:Label>
+        <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [PROJE_KODU], [PROJE_ADI], [PROJE_BASLAMA_TARIHI], [PROJE_AKTIF], [PROJE_TESLIM_TARIHI] FROM [TBLPROJEDOSYA]"></asp:SqlDataSource>
+        <asp:GridView ID="GridView2" runat="server" Height="207px" Width="748px">
+        </asp:GridView>
+        <br />
     </form>
 </body>
 </html>
