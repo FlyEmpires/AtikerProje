@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -145,12 +145,12 @@ namespace atikerhakiki
             //string message = "Row Index: " + index + "\\nName: " + lblValuename.Text + "\\nCountry: " + lblValueCountry.Text;
             //ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
 
-            var command = "SELECT * FROM TBLCARISB WHERE CARI_KODU = '" + GridView1.Rows[1].Cells[1].Text +  "'";
-            var commandd = "SELECT * FROM TBLCARISB WHERE CARI_ADI = '" + GridView1.Rows[2].Cells[2].Text + "'";
+            var command = "SELECT * FROM TBLCARISB WHERE CARI_KODU = '" + TextBox1.Text +  "'";
+            //var commandd = "SELECT * FROM TBLCARISB WHERE CARI_ADI = '" + GridView1.Rows[2].Cells[2].Text + "'";
             //var commanddd = "SELECT * FROM TBLCARISB WHERE CARI_KISA_ISIM = '" + GridView1.Rows[2].Cells[2].Text + "'";
             //var commandddd = "SELECT * FROM TBLCARISB WHERE CARI_IL = '" + GridView1.Rows[3].Cells[3].Text + "'";
 
-
+            //GridView1.Rows[1].Cells[1].Text
 
 
             SqlCommand _cmd = new SqlCommand(command, con);
@@ -159,10 +159,10 @@ namespace atikerhakiki
             if (_rd.HasRows)
             {
 
-                TextBox2.Text = _rd.GetValue(10).ToString();
-                TextBox3.Text = _rd.GetValue(11).ToString();
-                TextBox4.Text = _rd.GetValue(15).ToString();
-                TextBox5.Text = _rd.GetValue(16).ToString();
+                TextBox2.Text = _rd.GetValue(11).ToString();
+                TextBox3.Text = _rd.GetValue(12).ToString();
+                TextBox4.Text = _rd.GetValue(16).ToString();
+                TextBox5.Text = _rd.GetValue(17).ToString();
 
 
             }
