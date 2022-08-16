@@ -89,13 +89,9 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button3" runat="server" Height="77px" OnClick="Button3_Click" Text="GÜNCELLEME" Width="117px" />
 &nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label2" runat="server" Text="PROJE KODU: "></asp:Label>
-&nbsp;
-        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" Text="PROJE KODU:  "></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button2" runat="server" Height="75px" OnClick="Button2_Click" Text="SİL" Width="157px" />
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
                 <asp:GridView ID="GridView1" runat="server" Height="220px" Width="696px">

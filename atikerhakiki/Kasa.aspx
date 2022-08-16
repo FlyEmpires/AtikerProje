@@ -63,8 +63,6 @@
             &nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button2" runat="server" Height="26px" OnClick="Button2_Click" Text="SİL" Width="56px" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label1" runat="server" Text="KASA KODU: "></asp:Label>
-            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
                 </p>
         <asp:GridView ID="GridView1" runat="server" Height="186px" Width="486px" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
             <AlternatingRowStyle BackColor="PaleGoldenrod" />

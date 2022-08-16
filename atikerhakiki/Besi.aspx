@@ -94,9 +94,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button2" runat="server" Height="66px" OnClick="Button2_Click" Text="SİL" Width="159px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label1" runat="server" Text="Küpe No:   "></asp:Label>
-            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-        </p>
+            </p>
         <asp:GridView ID="GridView1" runat="server" Height="229px" Width="620px" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
             <FooterStyle BackColor="White" ForeColor="#333333" />
             <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />

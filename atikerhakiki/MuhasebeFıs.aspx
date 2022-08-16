@@ -58,10 +58,8 @@
 &nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button2" runat="server" Height="51px" Text="GÜNCELLE" Width="87px" OnClick="Button2_Click1" />
 &nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" Text="FİŞ NUMARASI: "></asp:Label>
-&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;
         
         <div class="muhfıstablo">
@@ -89,11 +87,7 @@
        
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button3" runat="server" Height="52px" Text="SİL" Width="75px" OnClick="Button3_Click1" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label2" runat="server" Text="FİŞ NUMARASI:  "></asp:Label>
-        &nbsp;
-        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
 
             

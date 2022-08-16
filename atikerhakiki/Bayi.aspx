@@ -95,17 +95,13 @@
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label2" runat="server" Text="Bayi Kodu: "></asp:Label>
             &nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button3" runat="server" Height="28px" OnClick="Button3_Click" Text="GÜNCELLE" Width="95px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
             <asp:Button ID="Button2" runat="server" Height="26px" OnClick="Button2_Click" Text="SİL" Width="60px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label1" runat="server" Text="Bayi Kodu:     "></asp:Label>
-&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;
             <asp:GridView ID="GridView1" runat="server" Height="301px" Width="620px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
                 <AlternatingRowStyle BackColor="White" />
                 <FooterStyle BackColor="#CCCC99" />

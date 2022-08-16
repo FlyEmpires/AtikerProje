@@ -32,7 +32,9 @@
 
         <tr>
             <td>&nbsp &nbsp &nbsp Cari Kodu:</td>
-            <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+            <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="GETİR" />
+            </td>
 
 <%--            <td><input type="text" class="bosluk" name="no" placeholder="Lütfen Stok No Giriniz"/></td>--%>
         </tr>
@@ -40,7 +42,7 @@
         <tr>
             <td class="auto-style4">&nbsp; &nbsp;&nbsp; &nbsp;Cari Adı:</td>
 
-            <td><asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
+            <td><asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine"></asp:TextBox></td>
         </tr>
 
         <tr>
@@ -74,12 +76,12 @@
                     <asp:Button ID="Button1" runat="server" Height="63px" OnClick="Button1_Click" Text="KAYDET" Width="132px" />
                     <asp:Button ID="Button2" runat="server" CssClass="auto-style3" Height="61px" OnClick="Button2_Click" Text="GÜNCELLE" Width="175px" />
                     <asp:Button ID="Button3" runat="server" Height="59px" OnClick="Button3_Click" Text="SİL" Width="111px" />
-&nbsp;&nbsp; CARİ NO:<asp:TextBox ID="TextBox6" runat="server" Height="47px" OnTextChanged="TextBox6_TextChanged" TextMode="MultiLine" Width="172px"></asp:TextBox>
+&nbsp;
         </p></div>
         &nbsp;
         <%-- CLASS --%>
         <div class="tablo" >
-        <asp:GridView ID="GridView1" runat="server" Height="136px" Width="512px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+        <asp:GridView ID="GridView1" runat="server" Height="136px" Width="512px" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             
 
             <FooterStyle BackColor="White" ForeColor="#000066" />

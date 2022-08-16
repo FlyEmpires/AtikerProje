@@ -16,10 +16,7 @@
             width: 560px;
             height: 339px;
         }
-        .auto-style3 {
-            margin-top: 0px;
-        }
-    </style>
+        </style>
 </head>
 
 <body>
@@ -34,7 +31,9 @@
 
         <tr>
             <td>&nbsp &nbsp &nbsp Stok Adı :</td>
-            <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
+            <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Button" />
+            </td>
 
 <%--            <td><input type="text" class="bosluk" name="no" placeholder="Lütfen Stok No Giriniz"/></td>--%>
         </tr>
@@ -76,12 +75,9 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button3" runat="server" Height="53px" OnClick="Button3_Click" Text="GÜNCELLE" Width="122px" />
 &nbsp;
-            <asp:Label ID="Label1" runat="server" Text="STOK KODU: "></asp:Label>
-&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox7" runat="server" Height="45px" Width="139px"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="margin-left: 55px" Text="SİL" Width="131px" Height="52px" />
-        &nbsp;&nbsp;&nbsp;&nbsp; Stok Kodu:&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox6" runat="server" CssClass="auto-style3" Height="43px" Width="195px"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [STOK_ADI], [STOK_TIPI], [STOK_KISA_ADI], [STOK_KODU], [PERAKENDE_ALIS_KDV] FROM [TBLSTOKSB]"></asp:SqlDataSource>
         <br />

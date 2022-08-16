@@ -120,5 +120,17 @@ namespace atikerhakiki
         {
             listeleme2();
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            GridViewRow row = GridView1.SelectedRow;
+            int index = GridView1.SelectedRow.RowIndex;
+            TextBox lblValuename = (TextBox)row.FindControl("TextBox1");
+            TextBox lblValueCountry = (TextBox)row.FindControl("TextBox2");
+            string message = "Row Index: " + index + "\\nName: " + lblValuename.Text + "\\nCountry: " + lblValueCountry.Text;
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
+
+
+        }
     }
 }

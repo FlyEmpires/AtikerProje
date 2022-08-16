@@ -63,7 +63,7 @@ namespace atikerhakiki
         protected void Button2_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLBESISB where KUPE_NO='" + TextBox6.Text.ToString() + "'";
+            cmd.CommandText = "Delete from TBLBESISB where KUPE_NO='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -72,7 +72,7 @@ namespace atikerhakiki
         protected void Button3_Click(object sender, EventArgs e)
         {
             dt = new DataTable();
-            cmd.CommandText = "Update TBLBESISB set BESI_ADI='" + TextBox2.Text.ToString() + "',BESI_CINSI='" + TextBox3.Text.ToString() + "',DOGUM_TARIHI='" + Convert.ToDateTime( Convert.ToString( TextBox4.Text)).ToString("yyyyMMdd") + "',DOGUM_KG='" + TextBox5.Text.ToString() + "' where KUPE_NO='" + TextBox6.Text.ToString() + "' ";
+            cmd.CommandText = "Update TBLBESISB set BESI_ADI='" + TextBox2.Text.ToString() + "',BESI_CINSI='" + TextBox3.Text.ToString() + "',DOGUM_TARIHI='" + Convert.ToDateTime( Convert.ToString( TextBox4.Text)).ToString("yyyyMMdd") + "',DOGUM_KG='" + TextBox5.Text.ToString() + "' where KUPE_NO='" + TextBox1.Text.ToString() + "' ";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();

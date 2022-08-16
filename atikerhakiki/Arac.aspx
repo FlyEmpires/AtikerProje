@@ -72,7 +72,6 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" Height="36px" Width="102px" />
             <asp:Button ID="Button3" runat="server" Height="35px" OnClick="Button3_Click" Text="GÜNCELLE" Width="85px" />
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="SİL" Width="130px" Height="35px" />
-            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
             <asp:GridView ID="GridView1" runat="server" Height="426px" Width="792px" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
                 <AlternatingRowStyle BackColor="PaleGoldenrod" />
                 <FooterStyle BackColor="Tan" />

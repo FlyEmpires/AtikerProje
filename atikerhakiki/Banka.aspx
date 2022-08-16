@@ -69,14 +69,10 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
         &nbsp;&nbsp;&nbsp;<asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="GÜNCELLE" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label3" runat="server" Text="Hesap Kodu"></asp:Label>
-&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label1" runat="server" Text="HESAP KODU:"></asp:Label>
-&nbsp;
-            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-        &nbsp;&nbsp;
+            &nbsp;
+            &nbsp;&nbsp;
             <asp:Button ID="Button2" runat="server" Height="24px" OnClick="Button2_Click" Text="SİL" Width="73px" />
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
         </p>

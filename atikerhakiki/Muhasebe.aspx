@@ -69,10 +69,8 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="Button2" runat="server" Height="27px" OnClick="Button2_Click" Text="SİL" Width="89px" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Label ID="Label1" runat="server" Text="HESAP KODU: "></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-        </p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="HESAP_KODU" DataSourceID="SqlDataSource2" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Height="295px" Width="616px">
             <Columns>
                 <asp:BoundField DataField="ISLETME_NO" HeaderText="ISLETME_NO" SortExpression="ISLETME_NO" />
