@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -41,7 +41,7 @@ namespace atikerhakiki
         public void listeleme2()
         {
             ds = new DataSet();
-            cmd.CommandText = "select SUBE_KODU, LIST_NO, TARIH,FISNUM,AY_KODU from TBLMUHFISHR where FISNUM='" + TextBox8.Text.ToString() + "'";
+            cmd.CommandText = "select SUBE_KODU, LIST_NO, TARIH,FISNUM,AY_KODU from TBLMUHFISHR where FISNUM='" + TextBox2.Text.ToString() + "'";
             cmd.Connection = con;
             adp = new SqlDataAdapter(cmd);
             adp.Fill(ds);
@@ -69,7 +69,8 @@ namespace atikerhakiki
             //cmd.Connection = con;
             //cmd.ExecuteNonQuery();
             temizleme();
-            listeleme();    
+            listeleme();
+
         }
         protected void Button2_Click1(object sender, EventArgs e)
         {

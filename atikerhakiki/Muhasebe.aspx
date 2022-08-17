@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="css/resp.css" rel="stylesheet" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -22,6 +24,14 @@
         }
         .auto-style6 {
             width: 196px
+        }
+            .grid1 {
+            margin-top: -200px;
+            margin-left: 750px;
+        }
+
+        .grid2 {
+            margin-top: 100px;
         }
     </style>
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
@@ -75,10 +85,10 @@
         &nbsp;&nbsp;&nbsp;<asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="GÜNCELLEME" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="Button2" runat="server" Height="27px" OnClick="Button2_Click" Text="SİL" Width="89px" />
-&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </p>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="HESAP_KODU" DataSourceID="SqlDataSource2" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Height="295px" Width="616px">
+        <asp:GridView ID="GridView1" class="grid1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="HESAP_KODU" DataSourceID="SqlDataSource2" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Height="295px" Width="616px">
             <Columns>
                 <asp:BoundField DataField="ISLETME_NO" HeaderText="ISLETME_NO" SortExpression="ISLETME_NO" />
                 <asp:BoundField DataField="HESAP_KODU" HeaderText="HESAP_KODU" ReadOnly="True" SortExpression="HESAP_KODU" />
@@ -97,11 +107,10 @@
             <SortedDescendingHeaderStyle BackColor="#93451F" />
         </asp:GridView>
         <br />
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
-&nbsp;<asp:Label ID="Label2" runat="server" Text="HESAP KODU: "></asp:Label>
-        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-        <asp:GridView ID="GridView2" runat="server" Height="183px" Width="390px">
+        <div class="grid2">
+&nbsp;<asp:GridView ID="GridView2" runat="server" Height="183px" Width="390px">
         </asp:GridView>
+            </div>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [ISLETME_NO], [HESAP_KODU], [HESAP_SINIF_KODU], [HESAP_GRUP_KODU], [HESAP_TIPI] FROM [TBLMUHSB]"></asp:SqlDataSource>
         <br />
     </form>

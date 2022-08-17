@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -47,11 +47,16 @@ namespace atikerhakiki
             DataSet9TableAdapters.TBLPROJEDOSYATableAdapter dt = new DataSet9TableAdapters.TBLPROJEDOSYATableAdapter();
             dt.ProjeEkle(TextBox1.Text, TextBox2.Text, Convert.ToDateTime(TextBox5.Text), Convert.ToInt32(TextBox4.Text), Convert.ToDateTime(TextBox6.Text));
             listeleme();
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox5.Text = "";
+            TextBox4.Text = "";
+            TextBox6.Text = "";
         }
         public void listeleme2()
         {
             ds = new DataSet();
-            cmd.CommandText = "select PROJE_KODU, PROJE_ADI, PROJE_SIPARIS_NO,PROJE_AKTIF,ACIK_SUBELER from TBL_PROJE_DOSYAHR where PROJE_KODU='" + TextBox9.Text.ToString() + "'";
+            cmd.CommandText = "select PROJE_KODU, PROJE_ADI, PROJE_SIPARIS_NO,PROJE_AKTIF,ACIK_SUBELER from TBL_PROJE_DOSYAHR where PROJE_KODU='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             adp = new SqlDataAdapter(cmd);
             adp.Fill(ds);

@@ -1,0 +1,141 @@
+﻿@media only screen and (max-width: 1024px) and (max-height: 768px) {
+
+    .tablo1 {
+        position: absolute;
+        right: 110px;
+        bottom: -550px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 120px;
+        bottom: -200px;
+    }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+
+    .tablo1 {
+        position: absolute;
+        right: 110px;
+        bottom: 1250px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 120px;
+        bottom: 1000px;
+    }
+}
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+
+    .tablo1 {
+        position: absolute;
+        right: 110px;
+        bottom: 1000px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 120px;
+        bottom: 700px;
+    }
+}
+@media only screen and (min-device-width : 390px) and (max-device-width : 844px) and (orientation : portrait) {
+
+    .tablo1 {
+        position: absolute;
+        right: 110px;
+        bottom: 1300px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 120px;
+        bottom: 900px;
+    }
+}
+@media only screen and (min-device-width : 540px) and (max-device-width : 720px) and (orientation : portrait) {
+
+    .tablo1 {
+        position: absolute;
+        right: 110px;
+        bottom: 600px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 120px;
+        bottom: 350px;
+    }
+}
+@media only screen and (min-device-width : 510px) and (max-device-width : 617px) and (orientation : portrait) {
+
+    .tablo1 {
+        position: absolute;
+        right: 110px;
+        bottom: 300px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 120px;
+        bottom: 100px;
+    }
+}
+@media only screen and (min-device-width : 620px) and (max-device-width : 635px) and (orientation : portrait) {
+
+    .tablo1 {
+        position: absolute;
+        right: 110px;
+        bottom: 300px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 120px;
+        bottom: 100px;
+    }
+}
+@media only screen and (min-device-width : 637px) and (max-device-width : 729px) and (orientation : portrait) {
+
+    .tablo1 {
+        position: absolute;
+        right: 110px;
+        bottom: 300px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 120px;
+        bottom: 50px;
+    }
+} 
+/*
+@media only screen and (max-width: 412px) and (max-height: 915px) {
+
+    .tablo1 {
+        position: absolute;
+        right: 250px;
+        bottom: -550px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 150px;
+        bottom: -200px;
+    }
+}
+@media only screen and (max-width: 800px) and (max-width:600px) {
+
+    .tablo1 {
+        position: absolute;
+        right: 110px;
+        bottom: -550px;
+    }
+
+    .tablo2 {
+        position: absolute;
+        right: 120px;
+        bottom: -200px;
+    }
+}*/

@@ -18,7 +18,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -32,6 +32,11 @@ namespace atikerhakiki
             DataSet6TableAdapters.TBLKASASBTableAdapter dt = new DataSet6TableAdapters.TBLKASASBTableAdapter();
             dt.KasaEkle(TextBox1.Text, TextBox2.Text, Convert.ToInt32(TextBox3.Text), TextBox4.Text, Convert.ToInt32(TextBox5.Text));
             listeleme();
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            TextBox4.Text = "";
+            TextBox5.Text = "";
 
         }
         public void listeleme()
@@ -50,7 +55,7 @@ namespace atikerhakiki
         public void listeleme2()
         {
             ds = new DataSet();
-            cmd.CommandText = "select KASA_ACIKLAMA as 'KASA AÇIKLAMA', YEVMIYE_ACIKLAMA, GIREN_TUTAR,CIKAN_TUTAR,BELGE_NO from TBLKASAHR where KASA_KODU_RECID='" + TextBox7.Text.ToString() + "'";
+            cmd.CommandText = "select KASA_ACIKLAMA as 'KASA AÇIKLAMA', YEVMIYE_ACIKLAMA, GIREN_TUTAR,CIKAN_TUTAR,BELGE_NO from TBLKASAHR where KASA_KODU_RECID='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             adp = new SqlDataAdapter(cmd);
             adp.Fill(ds);

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
-
+    <link href="css/resp.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -49,6 +49,14 @@
         .auto-style15 {
             width: 246px;
             height: 34px;
+        }
+                .grid1 {
+            margin-top: -250px;
+            margin-left: 650px;
+        }
+
+        .grid2 {
+            margin-top: 70px;
         }
     </style>
 </head>
@@ -96,15 +104,14 @@
         </div>
         <p>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button3" runat="server" Height="28px" OnClick="Button3_Click" Text="GÜNCELLE" Width="95px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
             <asp:Button ID="Button2" runat="server" Height="26px" OnClick="Button2_Click" Text="SİL" Width="60px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;
-            <asp:GridView ID="GridView1" runat="server" Height="301px" Width="620px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+            &nbsp;&nbsp;&nbsp;<asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
+            &nbsp;<asp:GridView ID="GridView1" class="grid1 tablo1" runat="server" Height="168px" Width="524px" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
                 <AlternatingRowStyle BackColor="White" />
                 <FooterStyle BackColor="#CCCC99" />
                 <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -118,12 +125,16 @@
             </asp:GridView>
         </p>
         <p>
-            <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Button" />
-            <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
         </p>
         <p>
-            <asp:GridView ID="GridView2" runat="server" Height="176px" Width="615px">
+                &nbsp;</p>
+        <p>
+                &nbsp;</p>
+        <p>
+                &nbsp;</p>
+        <p>
+            <asp:GridView ID="GridView2" class="grid2 tablo2" runat="server" Height="176px" Width="615px">
             </asp:GridView>
         </p>
         <p>

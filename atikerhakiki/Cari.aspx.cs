@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -46,6 +46,11 @@ namespace atikerhakiki
                 //}
                 DataSet8TableAdapters.TBLCARISBTableAdapter dt = new DataSet8TableAdapters.TBLCARISBTableAdapter();
                 dt.CariEkle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text);
+                TextBox1.Text = "";
+                TextBox2.Text = "";
+                TextBox3.Text = "";
+                TextBox4.Text = "";
+                TextBox5.Text = "";
             }
             catch (Exception)
             {
@@ -72,7 +77,7 @@ namespace atikerhakiki
         public void listeleme2()
         {
             ds = new DataSet();
-            cmd.CommandText = "select YEVMIYE_ACIKLAMA, KAYIT_ACIKLAMA, BORC,ALACAK from TBLCARIHR where CARI_KODU_RECID='" + TextBox7.Text.ToString() + "'";
+            cmd.CommandText = "select YEVMIYE_ACIKLAMA, KAYIT_ACIKLAMA, BORC,ALACAK from TBLCARIHR where CARI_KODU_RECID='" + TextBox1.Text.ToString() + "'";
             cmd.Connection = con;
             adp = new SqlDataAdapter(cmd);
             adp.Fill(ds);
@@ -167,6 +172,11 @@ namespace atikerhakiki
 
             }
 
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            listeleme2();
         }
     }
 }

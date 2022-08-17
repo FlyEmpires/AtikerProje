@@ -6,6 +6,7 @@
 <head runat="server">
                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
                  <link href="css/StyleSheet1.css" rel="stylesheet" />
+    <link href="css/resp.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -15,6 +16,14 @@
         .auto-style2 {
             width: 560px;
             height: 339px;
+        }
+                .grid1 {
+            margin-top: -350px;
+            margin-left: 750px;
+        }
+
+        .grid2 {
+            margin-top: 100px;
         }
         </style>
 </head>
@@ -50,7 +59,7 @@
 
         <tr>
             <td>&nbsp &nbsp &nbsp Stok Kodu :</td>
-            <td><asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;
+            <td><asp:TextBox ID="TextBox4" runat="server" Height="22px"></asp:TextBox>&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="GETİR" />
             </td>
         </tr>
@@ -75,15 +84,15 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" Height="54px" Width="128px" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button3" runat="server" Height="53px" OnClick="Button3_Click" Text="GÜNCELLE" Width="122px" />
-&nbsp;
-            &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="margin-left: 55px" Text="SİL" Width="131px" Height="52px" />
+&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="margin-left: 55px" Text="SİL (REC_NO)" Width="131px" Height="52px" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER (REC_NO)" Height="54px" Width="179px" />
         </p>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [STOK_ADI], [STOK_TIPI], [STOK_KISA_ADI], [STOK_KODU], [PERAKENDE_ALIS_KDV] FROM [TBLSTOKSB]"></asp:SqlDataSource>
         <br />
         <br />
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="165px" Width="555px">
+        <asp:GridView ID="GridView1" class="grid1 tablo1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="165px" Width="555px">
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#7C6F57" />
             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -96,15 +105,12 @@
             <SortedDescendingCellStyle BackColor="#D4DFE1" />
             <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
         &nbsp;
-        <asp:Label ID="Label2" runat="server" Text="STOK KODU: "></asp:Label>
-&nbsp;
-        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+        &nbsp;
         <br />
         <br />
         <br />
-        <asp:GridView ID="GridView2" runat="server" Height="166px" Width="553px">
+        <asp:GridView ID="GridView2" class="grid2 tablo2" runat="server" Height="166px" Width="553px">
         </asp:GridView>
     </form>
 </body>

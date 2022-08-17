@@ -24,7 +24,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
            
@@ -37,7 +37,7 @@ namespace atikerhakiki
         public void listeleme2()
         {
             ds = new DataSet();
-            cmd.CommandText = "select SUBE_KODU, MODUL_TBL, MODUL_TBL,MODUL_RECNO,TARIH from TBLMUHHR  where HESAP_KODU_RECID='" + TextBox7.Text.ToString() + "'";
+            cmd.CommandText = "select SUBE_KODU, MODUL_TBL, MODUL_TBL,MODUL_RECNO,TARIH from TBLMUHHR  where HESAP_KODU_RECID='" + TextBox2.Text.ToString() + "'";
             cmd.Connection = con;
             adp = new SqlDataAdapter(cmd);
             adp.Fill(ds);
@@ -52,7 +52,11 @@ namespace atikerhakiki
         {
             DataSet7TableAdapters.TBLMUHSBTableAdapter dt = new DataSet7TableAdapters.TBLMUHSBTableAdapter();
             dt.MuhasebeEkle(Convert.ToInt32(TextBox1.Text), TextBox2.Text, Convert.ToInt32(TextBox3.Text), Convert.ToInt32(TextBox4.Text), TextBox5.Text);
-           
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            TextBox4.Text = "";
+            TextBox5.Text = "";
         }
 
         protected void Button2_Click(object sender, EventArgs e)

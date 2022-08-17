@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
-
+    <link href="css/resp.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -22,6 +22,16 @@
             height: 240px;
             width: 453px;
         }
+                .grid1{
+
+    margin-top:-250px;
+    margin-left:820px;
+}
+                .grid2{
+
+    margin-top:70px;
+   
+}
     </style>
 </head>
 <body>
@@ -74,7 +84,8 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="KAYDET" Height="36px" Width="102px" />
             <asp:Button ID="Button3" runat="server" Height="35px" OnClick="Button3_Click" Text="GÜNCELLE" Width="85px" />
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="SİL" Width="130px" Height="35px" />
-            <asp:GridView ID="GridView1" runat="server" Height="426px" Width="792px" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
+            
+            <asp:GridView ID="GridView1" class="grid1 tablo1" runat="server" Height="298px" Width="506px" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
                 <AlternatingRowStyle BackColor="PaleGoldenrod" />
                 <FooterStyle BackColor="Tan" />
                 <HeaderStyle BackColor="Tan" Font-Bold="True" />
@@ -85,18 +96,22 @@
                 <SortedDescendingCellStyle BackColor="#E1DB9C" />
                 <SortedDescendingHeaderStyle BackColor="#C2A47B" />
             </asp:GridView>
+               
         </p>
         <p>
-            <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
 &nbsp;&nbsp;
+            <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
             <asp:Label ID="Label1" runat="server" Text="RECNO:  "></asp:Label>
             <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
         </p>
         <p>
+            
             &nbsp;</p>
-
+        <div class="grid2 tablo2">
         <asp:GridView ID="GridView2" runat="server" Height="217px" Width="791px">
         </asp:GridView>
+
+        </div>
 
     </form>
     
@@ -104,17 +119,9 @@
 </html>
 <style>
 
-    .tablo2 {
-background-color:aqua;
-    width: 75%;
   
-}
 
 
-.tablo1veri11 {
-    width: 75%;
-    height: 20px;
-}
 
     .auto-style7 {
         height: 83px;

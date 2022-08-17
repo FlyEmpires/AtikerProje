@@ -25,7 +25,7 @@ namespace atikerhakiki
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -42,6 +42,11 @@ namespace atikerhakiki
             DataSet1TableAdapters.TBLSTOKSBTableAdapter dt = new DataSet1TableAdapters.TBLSTOKSBTableAdapter();
             dt.Stokekle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, Convert.ToInt32(TextBox5.Text));
             listeleme();
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            TextBox4.Text = "";
+            TextBox5.Text = "";
 
         }
         public void listeleme ()
@@ -61,7 +66,7 @@ namespace atikerhakiki
     public void listeleme2()
         {
             ds = new DataSet();
-            cmd.CommandText = "SELECT TARIH, BELGE_NO, BELGESB_RECNO, BELGE_TIPI, SUBE_KODU FROM TBLSTOKHR where STOK_KODU_RECID='" + TextBox8.Text.ToString() + "'";
+            cmd.CommandText = "SELECT TARIH, BELGE_NO, BELGESB_RECNO, BELGE_TIPI, SUBE_KODU FROM TBLSTOKHR where STOK_KODU_RECID='" + TextBox4.Text.ToString() + "'";
             cmd.Connection = con;
             adp = new SqlDataAdapter(cmd);
             adp.Fill(ds);
@@ -89,13 +94,13 @@ namespace atikerhakiki
             //}
             //baglanti.Close();
             //GridView1.SelectedIndex = -1;
-
+                
 
 
 
 
             dt = new DataTable();
-            cmd.CommandText = "Delete from TBLSTOKSB WHERE REC_NO='" + TextBox1.Text.ToString()+"'";
+            cmd.CommandText = "Delete from TBLSTOKSB WHERE REC_NO='" + TextBox4.Text.ToString()+"'";
             cmd.Connection = con;
             cmd.ExecuteNonQuery();
             listeleme();
@@ -123,7 +128,7 @@ namespace atikerhakiki
 
         protected void Button5_Click(object sender, EventArgs e)
         {
-            var command = "SELECT * FROM TBLSTOKSB WHERE STOK_KODU = '" + TextBox4.Text + "'";
+            var command = "SELECT * FROM TBLSTOKSB WHERE REC_NO = '" + TextBox4.Text + "'";
 
             SqlCommand _cmd = new SqlCommand(command, con);
             var _rd = _cmd.ExecuteReader();

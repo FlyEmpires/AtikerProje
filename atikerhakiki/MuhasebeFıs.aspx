@@ -6,12 +6,20 @@
 <head runat="server">
                   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
           <link href="css/StyleSheet1.css" rel="stylesheet" />
-
+    <link href="css/resp.css" rel="stylesheet" />
     <title></title>
     <style type="text/css">
         .auto-style2 {
             height: 197px;
             width: 408px;
+        }
+                .grid1 {
+            margin-top: -250px;
+            margin-left: 100px;
+        }
+
+        .grid2 {
+            margin-top: 70px;
         }
     </style>
 </head>
@@ -20,7 +28,10 @@
   <li></li>
         <li><a href="Anasayfa.aspx">ANASAYFA</a></li>
 </ul>
+    
     <form id="form1" runat="server">
+        <br />
+
         <div>
              <table class="auto-style2" border="1">
 
@@ -59,42 +70,45 @@
         <asp:Button ID="Button1" runat="server" Height="53px" OnClick="Button1_Click" Text="KAYDET" Width="97px" />
 &nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button2" runat="server" Height="51px" Text="GÜNCELLE" Width="87px" OnClick="Button2_Click1" />
-&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<asp:Button ID="Button3" runat="server" Height="52px" Text="SİL" Width="75px" OnClick="Button3_Click1" />
+&nbsp;&nbsp;&nbsp;
+
+            
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" Height="50px" Width="106px" />
+       
+            &nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;
         
         <div class="muhfıstablo">
-        <asp:GridView ID="GridView1" runat="server" Height="194px" Width="385px" CellPadding="3" GridLines="Vertical" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px">
-            <AlternatingRowStyle BackColor="#DCDCDC" />
-            <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
-            <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-            <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
-            <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
-            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-            <SortedAscendingHeaderStyle BackColor="#0000A9" />
-            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-            <SortedDescendingHeaderStyle BackColor="#000065" />
+        <asp:GridView ID="GridView1" class="grid1 tablo1" runat="server" Height="79px" Width="385px" CellPadding="2" GridLines="None" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" ForeColor="Black">
+            <AlternatingRowStyle BackColor="PaleGoldenrod" />
+            <FooterStyle BackColor="Tan" />
+            <HeaderStyle BackColor="Tan" Font-Bold="True" />
+            <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+            <SortedAscendingCellStyle BackColor="#FAFAE7" />
+            <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+            <SortedDescendingCellStyle BackColor="#E1DB9C" />
+            <SortedDescendingHeaderStyle BackColor="#C2A47B" />
         </asp:GridView>
             </div>
         <br />
         <br />
         <br />
         <br />
-            <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
-
-            
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Button" />
+        <br />
+        <br />
+        <br />
+        <br />
        
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button3" runat="server" Height="52px" Text="SİL" Width="75px" OnClick="Button3_Click1" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
 
             
         <br />
-        <asp:GridView ID="GridView2" runat="server" Height="222px" Width="412px">
+        <asp:GridView ID="GridView2" class="grid2 tablo2" runat="server" Height="222px" Width="412px">
         </asp:GridView>
     </form>
 </body>

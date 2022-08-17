@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
-
+    <link href="css/resp.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -42,6 +42,14 @@
         .auto-style9 {
             width: 324px;
             height: 84px;
+        }
+                .grid1 {
+            margin-top: -350px;
+            margin-left:850px;
+        }
+
+        .grid2 {
+            margin-top: 70px;
         }
     </style>
 </head>
@@ -96,8 +104,9 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="Button2" runat="server" Height="66px" OnClick="Button2_Click" Text="SİL" Width="159px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" Height="61px" Width="156px" />
             </p>
-        <asp:GridView ID="GridView1" runat="server" Height="229px" Width="620px" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+        <asp:GridView ID="GridView1" class="grid1 tablo1" runat="server" Height="229px" Width="620px" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
             <FooterStyle BackColor="White" ForeColor="#333333" />
             <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
             <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
@@ -110,13 +119,10 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [KUPE_NO], [BESI_ADI], [BESI_CINSI], [DOGUM_TARIHI], [DOGUM_KG] FROM [TBLBESISB]"></asp:SqlDataSource>
         <br />
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="HAREKETLER" />
 &nbsp;&nbsp;
-        <asp:Label ID="Label2" runat="server" Text="Küpe No: "></asp:Label>
-        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:GridView ID="GridView2" runat="server" Height="131px" Width="562px">
+        <asp:GridView ID="GridView2" class="grid2 tablo2" runat="server" Height="131px" Width="562px">
         </asp:GridView>
     </form>
 </body>

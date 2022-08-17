@@ -90,6 +90,7 @@
     <Content Include="css\jquery.mCustomScrollbar.min.css" />
     <Content Include="css\main.css" />
     <Content Include="css\owl.css" />
+    <Content Include="css\resp.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\site.css" />
     <Content Include="css\StyleSheet1.css" />

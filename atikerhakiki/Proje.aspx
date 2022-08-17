@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
-
+    <link href="css/resp.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
@@ -17,6 +17,16 @@
             width: 686px;
             height: 617px;
         }
+        .grid1{
+
+    margin-top:-600px;
+    margin-left:730px;
+}
+                .grid2{
+
+    margin-top:350px;
+   
+}
     </style>
 </head>
 <body>
@@ -27,7 +37,7 @@
     <form id="form1" runat="server">
         <div>
 
-            
+           
              <table class="auto-style2" border="1">
 
         <tr>
@@ -86,26 +96,30 @@
         </tr>
 
     </table>
-        </div>
+                </div>
+       
         <asp:Button ID="Button1" runat="server" Height="84px" OnClick="Button1_Click" Text="KAYDET" Width="149px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button3" runat="server" Height="77px" OnClick="Button3_Click" Text="GÜNCELLEME" Width="117px" />
-&nbsp;&nbsp;&nbsp;
-        &nbsp;
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button2" runat="server" Height="75px" OnClick="Button2_Click" Text="SİL" Width="157px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click1" Text="HAREKETLER" Height="74px" Width="200px" />
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [REC_DATE], [REC_USERNAME], [ARAC_PLAKA], [ARAC_MODEL], [ARAC_MARKA] FROM [TBLARACSB]"></asp:SqlDataSource>
-                <asp:GridView ID="GridView1" runat="server" Height="220px" Width="696px">
+                <div class="grid1">
+        <asp:GridView ID="GridView1" runat="server" Height="220px" Width="696px">
         </asp:GridView>
+                    </div>
         <br />
         <br />
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click1" Text="HAREKETLER" />
-&nbsp;<asp:Label ID="Label3" runat="server" Text="PROJE_KODU"></asp:Label>
-        <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [PROJE_KODU], [PROJE_ADI], [PROJE_BASLAMA_TARIHI], [PROJE_AKTIF], [PROJE_TESLIM_TARIHI] FROM [TBLPROJEDOSYA]"></asp:SqlDataSource>
-        <asp:GridView ID="GridView2" runat="server" Height="207px" Width="748px">
+        
+
+        <div class="grid2">
+&nbsp;<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ATIKERConnectionString %>" SelectCommand="SELECT [PROJE_KODU], [PROJE_ADI], [PROJE_BASLAMA_TARIHI], [PROJE_AKTIF], [PROJE_TESLIM_TARIHI] FROM [TBLPROJEDOSYA]"></asp:SqlDataSource>
+        <asp:GridView  ID="GridView2" runat="server" Height="207px" Width="748px">
         </asp:GridView>
+           </div>
+
         <br />
     </form>
 </body>

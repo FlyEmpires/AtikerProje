@@ -17,7 +17,7 @@ namespace atikerhakiki
         DataSet ds = new DataSet();
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.ConnectionString = @"Data Source=DESKTOP-CQ6VQ08;Initial Catalog=ATIKER;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-ICQEILB;Initial Catalog=ATIKER;Integrated Security=True";
 
             con.Open();
             if (!Page.IsPostBack)
@@ -31,7 +31,11 @@ namespace atikerhakiki
             DataSet4TableAdapters.TBLBESISBTableAdapter dt = new DataSet4TableAdapters.TBLBESISBTableAdapter();
             dt.BesiEkle(TextBox1.Text, TextBox2.Text, TextBox3.Text,Convert.ToDateTime( TextBox4.Text),  Convert.ToDouble(TextBox5.Text));
             listeleme();
-
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            TextBox4.Text = "";
+            TextBox5.Text = "";
         }
         public void listeleme()// VERİ ÇEKME
         {
